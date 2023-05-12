@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Codystar&family=Comfortaa:wght@500;700&family=Gruppo&display=swap');
+/*
+Google Fonts...
+font-family: 'Bungee Outline', cursive;
+font-family: 'Codystar', cursive;
+font-family: 'Comfortaa', cursive;
+font-family: 'Gruppo', cursive;
+*/
+
+:root {
+  --gradient-purple-pink: linear-gradient(30deg,
+                          hsl(300, 100%, 25%, 0.90) 30%,
+                          hsl(350, 100%, 88%, 0.90));
+  --gradient-purple-blue: linear-gradient(30deg,
+                          hsl(300, 100%, 25%, 0.90) 30%,
+                          hsla(252, 100%, 50%, 0.9));
+  --gradient-blue-green: linear-gradient(180deg,
+                          hsl(153, 91%, 56%) 0%,
+                          hsl(203, 100%, 50%) 100%);
+  --gradient-pink-green: linear-gradient(to top,
+                          hsl(210, 27%, 87%, 0.9) 0%,
+                          hsl(350, 100%, 84%, 0.9) 0%,
+                          hsl(111, 100%, 87%, 0.9) 100%);
+  --gradient-yellow-pink: linear-gradient(-225deg,
+                          hsl(42, 100%, 81%, 0.9) 0%,
+                          hsl(6, 100%, 81%, 0.9) 48%,
+                          hsl(343, 100%, 72%, 0.9) 100%);
+  --gradient-pink-green2: linear-gradient(-20deg,
+                          hsl(306, 60%, 59%, 0.9) 0%,
+                          hsl(158, 71%, 48%, 0.9) 100%);
+  --gradient-blue-green: linear-gradient(to right,
+                          hsl(126, 98%, 78%, 0.9) 0%,
+                          hsl(193, 100%, 50%, 0.9) 100%);
+
+--gradient-coral-peachpuff: linear-gradient(
+  132deg,
+  hsla(14, 100%, 75%, 0.9),
+  hsla(28, 100%, 82%, 0.9)
+);
+--gradient-atomictangerine-salmon: linear-gradient(
+  311deg,
+  hsla(20, 100%, 70%, 0.9),
+  hsla(0, 100%, 70%, 0.9)
+);
+--gradient-limegreen-dodgerblue: linear-gradient(
+  248deg,
+  hsla(135, 100%, 50%, 0.9),
+  hsla(210, 100%, 56%, 0.9)
+);
+--gradient-beige-tomato: linear-gradient(
+  355deg,
+  hsla(72, 44%, 90%, 0.9),
+  hsla(9, 100%, 64%, 0.9)
+);
+/* IS THIS ONE FUCKED? */
+--gradient-orange-yellow: linear-gradient(
+  75deg,
+  hsla(36, 100%, 52%, 0.9),
+  hsla(52, 100%, 50%)
+);
+--gradient-skyblue-royalblue: linear-gradient(
+  299deg,
+  hsla(204, 93%, 67%, 0.9),
+  hsla(225, 73%, 57%, 0.9)
+);
+--gradient-crimson-deeppink: linear-gradient(
+  145deg,
+  hsla(348, 83%, 58%, 0.9),
+  hsla(327, 64%, 42%, 0.9)
+);
+--gradient-red-orangered: linear-gradient(
+  222deg,
+  hsla(16, 100%, 59%, 0.9),
+  hsla(20, 100%, 70%, 0.9)
+);
+--gradient-gold-darkorange: linear-gradient(
+  39deg,
+  hsla(45, 96%, 58%, 0.9),
+  hsla(17, 100%, 59%, 0.9)
+);
+--gradient-deepskyblue-blue: linear-gradient(
+  106deg,
+  hsla(195, 100%, 50%, 0.9),
+  hsla(240, 100%, 50%, 0.9)
+);
+--gradient-darkorchid-darkviolet: linear-gradient(
+  293deg,
+  hsla(282, 80%, 58%, 0.9),
+  hsla(274, 100%, 41%, 0.9)
+);
+--gradient-firebrick-sienna: linear-gradient(
+  84deg,
+  hsla(0, 68%, 34%, 0.9),
+  hsla(19, 56%, 40%, 0.9)
+);
+--gradient-darkorange-coral: linear-gradient(
+  13deg,
+  hsla(33, 100%, 50%, 0.9),
+  hsla(16, 100%, 66%, 0.9)
+);
+--gradient-steelblue-cornflowerblue: linear-gradient(
+  84deg,
+  hsla(207, 44%, 49%, 0.9),
+  hsla(219, 79%, 66%, 0.9)
+);
+--gradient-palevioletred-hotpink: linear-gradient(
+  13deg,
+  hsla(340, 60%, 65%, 0.9),
+  hsla(330, 100%, 71%, 0.9)
+);
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+main { padding: 0; }
+
+body,
+p,
+.card-back { margin: 0; }
+
+body {
+  background-color: #212121;
+  font-family: 'Comfortaa', cursive;
+  line-height: 1.4em;
+}
+
+main {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid blue;
+}
+
+main article {
+}
+
+.tile {
+  width: 300px;
+  aspect-ratio: 1/1;
+  margin: 1em;
+
+}
+
+section img {
+  max-width: 66%;
+  max-height: 66%;
+}
+
+.credits {
+  text-align: right;
+}
+
+.credits,
+.credits a {
+  color: rgb(111, 178, 111);
+  text-shadow: 2px 2px 1px black;
+  text-decoration-line: none;
+}
+
+.credits a {
+  text-underline-position: above !important;
+}
+.credits a:hover {
+  text-decoration-line: overline;
+  text-decoration-line: underline;
+}
+
+.credits h1 {
+  text-decoration: underline wavy rgba(255, 0, 0, 0.648);
+}
+
+.credits li {
+  list-style-type: none;
+}
+
+.card-front, .card-back {
+  border-radius: 15%;
+  box-shadow: inset 0px 1px 1px hsla(0, 0%, 100%, 0.577),
+              inset 0px -1px 1px hsla(0, 0%, 0%, 0.769),
+                    0px 1px 1px hsla(0, 0%, 0%, 0.671);
+}
+
+.card-front {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-back {
+  color: hsl(240, 10%, 79%);
+  transform: rotateY(180deg);
+  padding: 1.5rem;
+  text-shadow: 0 1px 01px #212121;
+  overflow-y: auto;
+
+  /* font-size: calc(21px + 1.2dvw); */
+  font-size: 21px;
+  line-height: 1.4em;
+}
+
+/* Hide scrollbars */
+.card-back {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.card-back::-webkit-scrollbar {
+  display: none;
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+https://www.w3schools.com/howto/howto_css_flip_card.asp
+*/
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.tile {
+  background-color: transparent;
+  border-radius: 15%;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do a horizontal flip when you move the mouse over the flip box container */
+article:hover .card-container {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
