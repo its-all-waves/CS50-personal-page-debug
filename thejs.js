@@ -14,20 +14,24 @@ async function populateCards() {
 
 	// TODO: randomly select objects from the json array
 	// generate a new tile for each thing about me
-	const imgDir = 'img/'
+	let animationDelay = 0
+	const ANIMATION_DELAY_INTERVAL = 0.3 // seconds
+	const imgDir = 'img'
 	for (let i = 0; i < thingsAboutMe.length; i++) {
 
 		const thisThing = thingsAboutMe[i]
 
 		// build the new nodes, set attributes, and populate them
-		const article = document.createElement('article')
-		article.id = thisThing['id']
-		article.className = 'tile'
+		const tile = document.createElement('article')
+		tile.id = thisThing['id']
+		tile.className = 'tile'
+		tile.style.animationDelay = `${animationDelay}s`
+		animationDelay += ANIMATION_DELAY_INTERVAL
 
 		const cardContainer = document.createElement('div')
 		cardContainer.className = 'card-container'
 		// hide this wrapper from screen readers as it breaks the semantics
-		cardContainer.ariaHidden = true
+		cardContainer.ariaHidden = "true"
 
 		const cardFront = document.createElement('section')
 		cardFront.className = 'card-front'
@@ -36,15 +40,16 @@ async function populateCards() {
 		cardBack.className = 'card-back'
 
 		const img = document.createElement('img')
-		img.src = `${imgDir}${thisThing['img']}`
+		img.src = `${imgDir}/${thisThing['img']}`
 		img.alt = thisThing['img_alt']
 
 		const text = document.createElement('p')
+		// not using .textContent bc it renders html as plaintext -- need links
 		text.innerHTML = thisThing['text']
 
 		// put the nodes together
-		main.append(article)
-		article.append(cardContainer)
+		main.append(tile)
+		tile.append(cardContainer)
 		cardContainer.append(cardFront, cardBack)
 		cardFront.append(img)
 		cardBack.append(text)
@@ -56,16 +61,13 @@ async function populateCards() {
 		credits.append(listItem)
 
 		// style the tile with a random background color
-		const bgColors_old = [
+		const bgColors = [
 			'--gradient-purple-pink',
-			'--gradient-purple-blue',
 			'--gradient-blue-green',
 			'--gradient-pink-green',
 			'--gradient-yellow-pink',
 			'--gradient-pink-green2',
-			'--gradient-blue-green',
-		]
-		const bgColors = [
+			'--gradient-blue-green', //
 			"--gradient-coral-peachpuff",
 			"--gradient-atomictangerine-salmon",
 			"--gradient-limegreen-dodgerblue",
@@ -82,15 +84,26 @@ async function populateCards() {
 			"--gradient-steelblue-cornflowerblue",
 			"--gradient-palevioletred-hotpink"
 		];
-		const randomColor = randomChoiceFromArray([...bgColors, ...bgColors_old])
+		const randomColor = randomChoiceFromArray(bgColors)
 		const bgColorFront = `var(${randomColor})`
 		const bgColorBack = bgColorFront
 		cardFront.style.backgroundImage = bgColorFront
 		// add a bg image + a translucent gradient atop it
+		// cardBack.style.background =
+		// 	`${bgColorBack}, url(${imgDir}/${thisThing['img']}), hsla(0, 0%, 0%, 0.512)`
 		cardBack.style.background =
-			`${bgColorBack}, url(${imgDir}${thisThing['img']})`
+			`linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), ${bgColorBack}, url(${imgDir}/${thisThing['img']})`
+			//  /* top layer */
+      // url("img/frog.png"), /* middle layer */
+      // linear-gradient(to bottom, blue, pink)
 		cardBack.style.backgroundPosition = 'center'
 		cardBack.style.backgroundSize = '100%'
+
+		
+
+		debugger
+
+
 	}
 
 

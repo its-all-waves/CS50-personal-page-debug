@@ -2,71 +2,92 @@
     {
         "id": "buddhism",
         "img": "lotus-flower.png",
-        "text": "Being born into <a href='https://www.sokaglobal.org/resources/study-materials/buddhist-study/the-basics-of-nichiren-buddhism-for-the-new-era-of-worldwide-kosen-rufu/chapter-1.html'>Nichiren Daishonin's Buddhism</a>, I was raised around people of many colors and nationalities.",
+        "text": "Being born into <a href='https://www.sokaglobal.org/resources/study-materials/buddhist-study/the-basics-of-nichiren-buddhism-for-the-new-era-of-worldwide-kosen-rufu/chapter-1.html' target='_blank'>Nichiren Daishonin's Buddhism</a>, I was raised around people of many nationalities. <br><br> <a href='https://www.sgi-usa.org/2022/08/07/nam-myoho-renge-kyo/' target='_blank'>Nam-Myoho-Renge-Kyo</a>",
         "img_alt": "Lotus flower",
-        "img_link": "<a href='https://www.flaticon.com/free-icons/lotus-flower' title='lotus flower icons'><cite>Lotus flower icon created by Freepik - Flaticon</cite></a>"
+        "img_link": "<a href='https://www.flaticon.com/free-icon/lotus-flower' title='lotus flower icon' target='_blank'><cite>Lotus flower icon created by Freepik - Flaticon</cite></a>"
     },
     {
         "id": "sound",
         "img": "headphone.png",
-        "text": "Making records and doing sound for movies and TV for the last 13 years has been quite a ride!)",
+        "text": "The last ~13 years of making records and movies/TV as a sound recordist & mixer was fun and challenging, but I'm ready for something new!",
         "img_alt": "Headphones",
-        "img_link": "<a href='https://www.flaticon.com/free-icons/audio' title='audio icons'><cite>Headphone icon created by Freepik - Flaticon</cite></a>"
+        "img_link": "<a href='https://www.flaticon.com/free-icons/audio' title='audio icon' target='_blank'><cite>Headphone icon created by Freepik - Flaticon</cite></a>"
     },
     {
         "id": "code",
         "img": "programming.png",
-        "text": "I started coding in Jan 2022. I made my first useful thing that summer, and I've been pretty obsessed ever since. Sometimes, it's all I can think about!",
+        "text": "I started programming in Jan 2022. I made my first useful thing that summer, and I've been obsessed ever since.",
         "img_alt": "Laptop with computer code",
-        "img_link": "<a href='https://www.flaticon.com/free-icons/coding' title='coding icons'><cite>Coding icons created by juicy_fish - Flaticon</cite></a>"
+        "img_link": "<a href='https://www.flaticon.com/free-icons/coding' title='coding icon' target='_blank'><cite>Coding icons created by juicy_fish - Flaticon</cite></a>"
     },
     {
         "id": "waves",
         "img": "waves.png",
-        "text": "At some point I took notice of the magical nature of waves. I don't discriminate. They're all great -- sound, light, gravitational, probabalistic.",
+        "text": "Can a wave of sufficient complexity describe literally anything? Are waves the fundamental language of the Universe? <br><br>Waves are a curious commonality -- a sort of unifying principle. Sound | Light | Gravity | Probability. Any changing thing can be described by waves, including the fictions of humans.",
         "img_alt": "Ocean waves",
-        "img_link": "<a href='https://www.flaticon.com/free-icons/waves' title='waves icons'><cite>Waves icons created by Freepik - Flaticon</cite></a>"
+        "img_link": "<a href='https://www.flaticon.com/free-icons/waves' title='waves icon' target='_blank'><cite>Waves icons created by Freepik - Flaticon</cite></a>"
     },
     {
         "id": "animals",
         "img": "koala.png",
         "text": "I love animals -- especially cute ones",
         "img_alt": "Koala bear hugging bamboo",
-        "img_link": "<a href='https://www.flaticon.com/free-icons/animals' title='animals icons'><cite>Animals icons created by Freepik - Flaticon</cite></a>"
+        "img_link": "<a href='https://www.flaticon.com/free-icons/animals' title='animals icon' target='_blank'><cite>Animals icons created by Freepik - Flaticon</cite></a>"
     },
     {
         "id": "futurism",
         "img": "robot.png",
-        "text": "I fantasize about the Singularity, and Ray Kurzweil's 6 epochs of the evolution of the universe.",
+        "text": "I fantasize about the <a href='https://www.youtube.com/watch?v=VJxcJqQG6lI&t=318s' target='_blank'>Singularity</a>, and Ray Kurzweil's <a href='https://www.kurzweilai.net/the-6-epochs-of-levolutio-by-ray-kurzweil#!prettyPhoto'>6 epochs</a> of the evolution of the universe.",
         "img_alt": "Man and machine",
-        "img_link": "<a href='https://www.flaticon.com/free-icons/robot' title='robot icons'><cite>Robot icons created by max.icons - Flaticon</cite></a>"
+        "img_link": "<a href='https://www.flaticon.com/free-icons/robot' title='robot icon' target='_blank'><cite>Robot icons created by max.icons - Flaticon</cite></a>"
     },
     {
         "id": "intersections",
         "img": "cube.png",
         "text": "I casually observe, but am propelled through life by fantasies of intersections: <br><ul><li>modern science x ancient mysticism</li><li>a unified theory</li><li>man x machine [x matter]</li></ul>",
         "img_alt": "Three cubes intersecting",
-        "img_link": "<a href='https://www.flaticon.com/free-icons/shape' title='shape icons'><cite>Shape icons created by Freepik - Flaticon</cite></a>"
+        "img_link": "<a href='https://www.flaticon.com/free-icons/shape' title='shape icon' target='_blank'><cite>Shape icons created by Freepik - Flaticon</cite></a>"
     },
     {
         "id": "quote-tendrils",
         "img": "alien.png",
-        "text": "<q>The cosmos is within us. We are made of star-stuff. We are a way for the universe to know itself.”</q> <br>― Carl Sagan",
+        "text": "<q>The cosmos is within us. We are made of star-stuff. We are a way for the universe to know itself.</q> <br><br>― <a href='https://www.youtube.com/watch?v=nGanLUnjoPI&t=151s' target='_blank'>Carl Sagan</a>",
         "img_alt": "!TEMP Computer Terminal",
-        "img_link": "<a href='https://www.flaticon.com/free-icons/alien' title='alien icons'><cite>Alien icons created by Icongeek26 - Flaticon</cite></a>"
+        "img_link": "<a href='https://www.flaticon.com/free-icons/alien' title='alien icon' target='_blank'><cite>Alien icons created by Icongeek26 - Flaticon</cite></a>"
     },
     {
         "id": "quote-tendrils2",
-        "img": "",
-        "text": "<q>Through our eyes, the universe is perceiving itself. Through our ears, the universe is listening to its harmonies. We are the witnesses through which the universe becomes conscious of its glory, of its magnificence.</q>” <br>― Alan Wilson Watts",
-        "img_alt": "TEMPLATE",
-        "img_link": "<a href='' title=''><cite>IMAGE_LINK</cite></a>"
+        "img": "big-bang.png",
+        "text": "<q>Through our <a href='https://www.youtube.com/watch?v=TZL682Xn1jI&t=55s' target='_blank'>eyes</a>, the universe is perceiving itself. Through our <a href='https://youtu.be/IQL53eQ0cNA' target='_blank'>ears</a>, the universe is listening to its harmonies. We are the witnesses through which the universe becomes conscious of its glory, of its magnificence.</q> <br><br>― <cite>Alan Wilson Watts</cite>",
+        "img_alt": "Big Bang!",
+        "img_link": "<a href='https://www.flaticon.com/free-icons/cosmology' title='cosmology icon' target='_blank'><cite>Cosmology icons created by Freepik - Flaticon</cite></a>"
     },
     {
         "id": "quote-funny1",
+        "img": "frog.png",
+        "text": "<q>I have always wanted to be somebody, but I see now I should have been more specific.</q> <br><br>- <cite>Lily Tomlin</cite>",
+        "img_alt": "A frog staring blankly at you.",
+        "img_link": "<a href='https://www.flaticon.com/free-icons/frog' title='frog icon' target='_blank'><cite>Frog icons created by Freepik - Flaticon</cite></a>"
+    },
+    {
+        "id": "cymatics",
+        "img": "flower-of-life.png",
+        "text": "There's got to be something to <a href='https://www.youtube.com/watch?v=Pmsfuj1Rk9c&t=218s' target='_blank'>cymatics</a>. ",
+        "img_alt": "",
+        "img_link": "<a href='https://www.flaticon.com/free-icons/flower-of-life' title='flower-of-life icons' target='_blank'><cite>Flower-of-life icons created by Freepik - Flaticon</cite></a>"
+    },
+    {
+        "id": "puerto-rico",
         "img": "",
-        "text": "<q>I have always wanted to be somebody, but I see now I should have been more specific. <br>- Lily Tomlin</q>",
-        "img_alt": "TEMPLATE",
-        "img_link": "<a href='' title=''><cite>IMAGE_LINK</cite></a>"
+        "text": "",
+        "img_alt": "",
+        "img_link": "<a href='' title='' target='_blank'><cite></cite></a>"
+    },
+    {
+        "id": "quote-funny2",
+        "img": "",
+        "text": "",
+        "img_alt": "",
+        "img_link": "<a href='' title='' target='_blank'><cite></cite></a>"
     }
 ]
