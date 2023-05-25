@@ -123,16 +123,20 @@ font-family: 'Gruppo', cursive;
   box-sizing: border-box;
 }
 
+html,
 body,
-main { padding: 0; }
+main {
+  padding: 0; 
+  background-color: #212121;
+}
 
+html,
 body,
 p,
+h1,
 .card-back { margin: 0; }
 
 body {
-  /* background-color: #212121; */
-  background: var(--gradient-purple-blue);
   font-family: 'Comfortaa', cursive;
   font-style: normal;
   font-weight: 500;
@@ -146,6 +150,9 @@ main {
   align-items: center;
   justify-content: center;
   border: 1px solid blue;
+  box-shadow: 
+    0 10px 10px hsla(0, 0%, 0%, 0.367),
+    inset 0 10px 10px hsla(0, 0%, 0%, 0.367);
 }
 
 main article {
@@ -179,29 +186,88 @@ section img {
 
 .credits {
   text-align: right;
+  padding-bottom: 0.1em;
+  /* padding-right: 1em; */
+  box-shadow: inset 0 -10px 10px hsla(0, 0%, 0%, 0.384);
 }
 
 .credits,
 .credits a {
-  color: rgb(111, 178, 111);
-  text-shadow: 2px 2px 2px black;
+  color: #445CF1;
+  text-shadow: 1px 1px 1px black;
   text-decoration-line: none;
 }
 
-.credits a {
-  text-underline-position: above !important;
-}
-.credits a:hover {
-  text-decoration-line: overline;
-  text-decoration-line: underline;
+.credits h1 {
+  text-decoration: underline wavy rgba(130, 0, 0, 0.648);
+  font-size: 1rem;
 }
 
-.credits h1 {
-  text-decoration: underline wavy rgba(255, 0, 0, 0.648);
+.credits h1,
+.credits ul {
+  margin: 1em;
 }
 
 .credits li {
   list-style-type: none;
+  display: inline-block;
+  line-break: strict;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0.66rem;
+}
+
+.credits a:hover {
+  text-decoration-line: overline underline;
+}
+
+footer {
+  text-align: center;
+  color: hsl(232, 86%, 61%);
+  font-size: 0.9rem;
+  padding: 1rem;
+  text-shadow: 1px 1px 0 black;
+}
+
+footer a {
+  color: hsl(232, 86%, 61%);
+  margin: 0;
+  padding: 0;
+}
+
+footer a:hover {
+  color: hsl(232, 86%, 75%);
+  font-size: 1.06em;
+}
+
+footer code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.11em;
+}
+
+dl {
+  text-align: left;
+  margin-top: -1em;
+  font-size: 0.81em;
+  line-height: 1.2em;
+}
+
+dt {
+font-style: italic;
+}
+
+#puerto-rico h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: -1em;
+}
+
+blockquote {
+  padding: 0;
+  margin: 0.3em;
+  font-style: italic;
+  font-size: 0.9em;
+  color: hsl(255, 10%, 80%) 
 }
 
 .card-front, .card-back {
@@ -290,4 +356,106 @@ article:hover .card-container {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Video background stuff
+https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
+*/
+
+/* Style the video: 100% width and height to cover the entire window */
+#background-video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  right: 0;
+  bottom: 0;
+  height: 100svh;
+  overflow: hidden;
+  background-color: black; 
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Animated background gradient stuff
+*/
+
+.gradient {
+  background: linear-gradient(33deg, rgba(48,207,208,1), rgb(81, 0, 255), rgba(51,8,103,1) 80%);
+  background-size: 400% 100%;
+  animation: gradient-fade 24s ease infinite;
+  height: 100%;
+}
+
+@keyframes gradient-fade {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Animated hero title stuff - https://codepen.io/kiran-r-raj/pen/QWvaPwE
+*/
+
+.hero-title {
+  position: absolute;
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.hero-text {
+  /* width: 400px;
+  height: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.hero-text span {
+  text-stroke
+  font-weight: bolder;
+  text-shadow: 
+    0rem 0.6rem 0rem hsl(232, 86%, 40%);
+  text-transform: uppercase;
+  font-size: 15vw;
+  margin-bottom: 15vw;
+  display: inline-block;
+  color: hsla(43, 100%, 51%, 0.607);
+  animation: zoomup 6s ease-in-out infinite;
+  animation-delay: calc(300ms * var(--i));
+}
+
+@keyframes zoomup {
+  0%,
+  100% {
+    transform: scale(1);
+    color:hsla(43, 100%, 51%, 0.607);
+    /* opacity: 0; */
+    blur: 20px;
+  }
+
+  50% {
+    /* opacity: 1.0; */
+    transform: scale(-1) translateY(-6rem) ;
+    filter: blur(1px);
+    color:hsla(232, 86%, 61%, 0.612)
+  }
 }
