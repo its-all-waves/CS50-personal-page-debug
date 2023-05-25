@@ -1,21 +1,12 @@
 /* TODO: on page load, animate all the cards like dominos to show that they can be flipped */
 
 async function populateCards() {
-	
 	// get a reference to the main section
 	const main = document.querySelector('main')
 
 	// to store the json data
 	let thingsAboutMe = null
 
-	// const request = new Request(url)
-	// const response = await fetch(request)
-	// // the json data that populates the tiles
-	// const thingsAboutMe = await response.json()
-	// shuffle(thingsAboutMe)
-	
-	
-	
 	// fetch json from root and load into memory
 	try {
 		const url = 'content.json'
@@ -143,7 +134,8 @@ function shuffle(array) {
   }
 }
 
-/* Returns an array of YouTube url strings. Assumes thisThing.text has video links. Stopped short of using this with the goal of creating modals for each youtube link... maybe one day. */
+/* Returns an array of YouTube url strings from the 'text' property of a JSON thingAboutMe. Assumes thisThing.text has video links. 
+NOTE: Stopped short of using this with the goal of creating modals for each youtube link... maybe one day. */
 // function getVideoLinksFrom(thisThingText) {
 // 	// assume thisThing has video links
 // 	// find a youtube URL ending with a single quote (')
@@ -158,6 +150,31 @@ function shuffle(array) {
 // 	return urls
 // }
 
+/* Indirectly checks if an Apple device is in low power mode, with maybe 75% confidence. */
+function alertIfAppleLowPowerMode() {
+	// return if no userAgent property
+	if (!navigator.userAgent) return
+	const userAgent = navigator.userAgent
+	if (
+		!userAgent.includes('iPhone') &&
+		!userAgent.includes('iPad') &&
+		!userAgent.includes('iPod') &&
+		!userAgent.includes('iWatch') &&
+		!userAgent.includes('Mac')
+	) {
+		return
+	}
+	console.log('here')
+	const bgVideo = document.querySelector('#background-video')
+	setTimeout(() => {
+		// after 3 seconds, if the bg video is still paused, its likely because the device is in low power mode -- alert the user sarcastically
+		if (bgVideo.paused) {
+			alert("I think I've detected low power mode on your device. If my eyebrows aren't doing the wave (or you can't see my face), I'm probably right, and you should probably turn that off, wait 5-10 seconds, then refresh the page. It's totally worth the battery drain.")
+		}
+	}, 3000)
+}
 
-// RUN THE MAIN FUNCTION
+// RUN THE MAIN FUNCTIONS
 populateCards()
+// had to go 2nd as black space would load instead of bg vid, otherwise
+alertIfAppleLowPowerMode()
