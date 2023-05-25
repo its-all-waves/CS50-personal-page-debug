@@ -417,7 +417,6 @@ Animated hero title stuff - https://codepen.io/kiran-r-raj/pen/QWvaPwE
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 3em;
 }
 
 .hero-text {
@@ -430,13 +429,12 @@ Animated hero title stuff - https://codepen.io/kiran-r-raj/pen/QWvaPwE
 }
 
 .hero-text span {
-  text-stroke
   font-weight: bolder;
   text-shadow: 
     0rem 0.6rem 0rem hsl(232, 86%, 40%);
   text-transform: uppercase;
   font-size: 15vw;
-  margin-bottom: 15vw;
+  margin-bottom: 0.6em;
   display: inline-block;
   color: hsla(43, 100%, 51%, 0.607);
   animation: zoomup 6s ease-in-out infinite;

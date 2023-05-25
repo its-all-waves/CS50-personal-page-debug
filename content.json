@@ -16,7 +16,7 @@
     {
         "id": "code",
         "img": "code.png",
-        "text": "I started programming in Jan 2022. I made my first useful thing that summer, and I've been obsessed ever since.",
+        "text": "I started programming in Jan 2022. I made my first useful thing that summer and I've been obsessed ever since.",
         "img_alt": "Laptop with computer code",
         "img_link": "<a href='https://www.flaticon.com/free-icons/code' title='code icons' target='_blank'><cite>Code icons created by Freepik - Flaticon</cite></a>"
     },
@@ -37,14 +37,14 @@
     {
         "id": "futurism",
         "img": "robot.png",
-        "text": "I fantasize about the <a href='https://www.youtube.com/watch?v=VJxcJqQG6lI&t=318s' target='_blank'>Singularity</a>, and Ray Kurzweil's <a href='https://www.kurzweilai.net/the-6-epochs-of-levolutio-by-ray-kurzweil#!prettyPhoto' target='_blank'>6 epochs</a> of the evolution of the universe.",
+        "text": "I fantasize about the <a href='https://www.youtube.com/watch?v=VJxcJqQG6lI&t=318s' target='_blank'>Singularity</a> and Ray Kurzweil's <a href='https://www.kurzweilai.net/the-6-epochs-of-levolutio-by-ray-kurzweil#!prettyPhoto' target='_blank'>6 epochs</a> of the evolution of the universe.",
         "img_alt": "Man and machine",
         "img_link": "<a href='https://www.flaticon.com/free-icons/robot' title='robot icon' target='_blank'><cite>Robot icons created by max.icons - Flaticon</cite></a>"
     },
     {
         "id": "intersections",
         "img": "cube.png",
-        "text": "I casually observe, but am propelled through life by fantasies of intersections: <br><ul><li>modern science x ancient mysticism</li><li>a <a href='' target='_blank'>unified theory ADD LINK HERE</a></li><li>man x machine [x matter]</li></ul>",
+        "text": "I casually observe, but am propelled through life by fantasies of intersections: <br><ul><li>modern science x ancient mysticism</li><li>a <a href='https://www.youtube.com/watch?v=Cm3iaPqY1a4' target='_blank'>unified theory</a></li><li>man x machine [x matter]</li></ul>",
         "img_alt": "Three cubes intersecting",
         "img_link": "<a href='https://www.flaticon.com/free-icons/shape' title='shape icon' target='_blank'><cite>Shape icons created by Freepik - Flaticon</cite></a>"
     },
@@ -79,7 +79,7 @@
     {
         "id": "puerto-rico",
         "img": "puerto-rico.jpg",
-        "text": "<h2><sup>1</sup>/<sub>2</sub> <a href='https://www.youtube.com/watch?v=cuzN21hZtqI' target=_blank>Boricua</a>.</h2> <br> (boh - ree - kwah) <br><br><dl> <dt>noun</dt> <dd>a Puerto Rican, or person of Puerto Rican descent: <blockquote>He’s a proud boricua.</blockquote></dd> <dt>adjective</dt> <dd>of or relating to Puerto Rico or Puerto Ricans: <blockquote>the top ten boricua restaurants in New York;</blockquote><blockquote>The new production of West Side Story will prioritize boricua casting.</blockquote></dd> </dl>",
+        "text": "<h2><sup>1</sup>/<sub>2</sub> <a href='https://www.youtube.com/watch?v=cuzN21hZtqI' target=_blank>Boricua</a>.</h2> <br> (boh - ree - kwah) <br><br><dl> <dt>noun</dt> <dd>a Puerto Rican, or person of Puerto Rican descent: <blockquote>He's a proud boricua.</blockquote></dd> <dt>adjective</dt> <dd>of or relating to Puerto Rico or Puerto Ricans: <blockquote>the top ten boricua restaurants in New York;</blockquote><blockquote>The new production of West Side Story will prioritize boricua casting.</blockquote></dd> </dl>",
         "img_alt": "Puerto Rican flag.",
         "img_link": "<a href='https://www.flaticon.com/free-icons/puerto-rico' title='Puerto Rico icons' target='_blank'><cite>Puerto Rico icons created by Blak1ta - Flaticon</cite></a>"
     },
@@ -93,8 +93,8 @@
     {
         "id": "michael-levin",
         "img": "nanobot.png",
-        "text": "Michael Levin's <a href='https://www.youtube.com/watch?v=XheAMrS8Q1c&t=853s' target='_blank'>xenobots</a>, and <a href='https://www.youtube.com/watch?v=YnObwxJZpZc&t=9s' target='_blank'><cite>The Computational Boundary of a Self</cite></a> are the most recent phenomenon to blow my mind wide open!",
-        "img_alt": "",
+        "text": "Michael Levin's <a href='https://www.youtube.com/watch?v=XheAMrS8Q1c&t=853s' target='_blank'>xenobots</a> and <a href='https://www.youtube.com/watch?v=YnObwxJZpZc&t=9s' target='_blank'><cite>The Computational Boundary of a Self</cite></a> are the most recent phenomenon to blow my mind wide open!",
+        "img_alt": "A nanobot.",
         "img_link": "<a href='https://www.flaticon.com/free-icons/nano' title='nano icons' target='_blank'><cite>Nano icons created by Eucalyp - Flaticon</cite></a>"
     }
 ]
