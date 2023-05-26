@@ -287,6 +287,17 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* pointer-events: auto; */
+}
+
+.card-front,
+.card-front img,
+.card-back {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .card-back {
@@ -305,6 +316,7 @@ blockquote {
   font-weight: bolder;
   animation: link-color 18s ease-in-out infinite;
 }
+
 
 @keyframes link-color {
   0%, 100% { color:hsla(0, 0%, 100%, 0.9); }
@@ -331,6 +343,7 @@ https://www.w3schools.com/howto/howto_css_flip_card.asp
   background-color: transparent;
   border-radius: 15%;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  pointer-events: auto
 }
 
 /* This container is needed to position the front and back side */
@@ -349,7 +362,8 @@ article:hover .card-container {
 }
 
 /* Position the front and back side */
-.card-front, .card-back {
+.card-back,
+.card-front {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -357,6 +371,15 @@ article:hover .card-container {
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+
+
+/* Attempt to fix the problem with some links not being tappable
+Partially works? but not using rotate: 0 -180deg, only kinda works when using transform: rotateY() */
+.card-back {
+  /* transform: rotateY(-180deg)  */
+  tranform: translateZ(12px);
+}
+
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Video background stuff
@@ -380,6 +403,13 @@ https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
   background-color: black; 
 }
 
+/* On small screen widths, video looked a bit off-center. This corrects. */
+@media screen and (max-width: 500px) {
+  #background-video {
+    transform: translateX(-36px) !important;
+    width: fit-content;
+  }  
+}
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Animated background gradient stuff

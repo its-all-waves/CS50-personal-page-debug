@@ -1,37 +1,13 @@
 /* TODO: on page load, animate all the cards like dominos to show that they can be flipped */
 
 async function populateCards() {
+	// get the json data from the root
+	let thingsAboutMe = await fetchJSONdata()
+	// guard against JSON failure - return since the rest needs the JSON data
+	if (!thingsAboutMe) return
+	
 	// get a reference to the main section
 	const main = document.querySelector('main')
-
-	// to store the json data
-	let thingsAboutMe = null
-
-	// fetch json from root and load into memory
-	try {
-		const url = 'content.json'
-		const request = new Request(url)
-		try {
-			const response = await fetch(request)
-			try {
-				// the json data that populates the tiles
-				thingsAboutMe = await response.json()
-				shuffle(thingsAboutMe)
-			} catch (responseError) {
-				console.log('There was an error with the response when getting the JSON data.')
-				console.log(responseError)
-			}
-		} catch (fetchError) {
-			console.log('There was an error fetching the requested JSON data.')
-			console.log(fetchError)
-		}
-	} catch (requestError) {
-		console.log('There was an error requesting the JSON data.')
-		console.log(requestError)
-	}
-
-	// guard against JSON failure - return from this function since the rest needs the JSON data
-	if (!thingsAboutMe) return
 
 	// list of tile bg colors to randomly choose from	
 	const bgColors = [
@@ -58,12 +34,12 @@ async function populateCards() {
 		"--gradient-palevioletred-hotpink"
 	];
 	
-	// generate a new tile for each thing about me
+	// setup to generate a new tile for each thing about me
 	let animationDelay = 0
 	const ANIMATION_DELAY_INTERVAL = 0.3 // seconds
 	const imgDir = 'img'
 	
-	// build the new nodes, set attributes, and populate them
+	// build the new nodes, set attributes, and populate them with things about me
 	for (let i = 0; i < thingsAboutMe.length; i++) {
 
 		const thisThing = thingsAboutMe[i]
@@ -77,11 +53,11 @@ async function populateCards() {
 		const cardContainer = document.createElement('div')
 		cardContainer.className = 'card-container'
 		// hide this from screen readers as it breaks the semantics (I think?)
-		cardContainer.ariaHidden = "true"
+		cardContainer.ariaHidden = 'true'
 
 		const cardFront = document.createElement('section')
 		cardFront.className = 'card-front'
-
+		
 		const cardBack = document.createElement('section')
 		cardBack.className = 'card-back'
 
@@ -120,6 +96,33 @@ async function populateCards() {
 	}
 }
 
+
+async function fetchJSONdata() {
+	let thingsAboutMe = null
+	// fetch json from root and load into memory
+	try {
+		const url = 'content.json'
+		const request = new Request(url)
+		try {
+			const response = await fetch(request)
+			try {
+				// the json data that populates the tiles
+				thingsAboutMe = await response.json()
+				shuffle(thingsAboutMe)
+			} catch (responseError) {
+				console.log('There was an error decoding the JSON data.')
+				console.log(responseError)
+			}
+		} catch (fetchError) {
+			console.log('There was an error fetching the requested JSON data.')
+			console.log(fetchError)
+		}
+	} catch (requestError) {
+		console.log('There was an error requesting the JSON data.')
+		console.log(requestError)
+	}
+	return thingsAboutMe
+}
 
 /* Returns a random choice from an array. */
 function randomChoiceFromArray(array) {
@@ -174,7 +177,16 @@ function alertIfAppleLowPowerMode() {
 	}, 3000)
 }
 
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // RUN THE MAIN FUNCTIONS
 populateCards()
+
 // had to go 2nd as black space would load instead of bg vid, otherwise
 alertIfAppleLowPowerMode()
+
+
+
+
+
