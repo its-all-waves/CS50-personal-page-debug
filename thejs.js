@@ -5,11 +5,11 @@ async function populateCards() {
 	let thingsAboutMe = await fetchJSONdata()
 	// guard against JSON failure - return since the rest needs the JSON data
 	if (!thingsAboutMe) return
-	
+
 	// get a reference to the main section
 	const main = document.querySelector('main')
 
-	// list of tile bg colors to randomly choose from	
+	// list of tile bg colors to randomly choose from
 	const bgColors = [
 		'--gradient-purple-pink',
 		'--gradient-blue-green',
@@ -17,31 +17,30 @@ async function populateCards() {
 		'--gradient-yellow-pink',
 		'--gradient-pink-green2',
 		'--gradient-blue-green', //
-		"--gradient-coral-peachpuff",
-		"--gradient-atomictangerine-salmon",
-		"--gradient-limegreen-dodgerblue",
-		"--gradient-beige-tomato",
-		"--gradient-orange-yellow",
-		"--gradient-skyblue-royalblue",
-		"--gradient-crimson-deeppink",
-		"--gradient-red-orangered",
-		"--gradient-gold-darkorange",
-		"--gradient-deepskyblue-blue",
-		"--gradient-darkorchid-darkviolet",
-		"--gradient-firebrick-sienna",
-		"--gradient-darkorange-coral",
-		"--gradient-steelblue-cornflowerblue",
-		"--gradient-palevioletred-hotpink"
-	];
-	
+		'--gradient-coral-peachpuff',
+		'--gradient-atomictangerine-salmon',
+		'--gradient-limegreen-dodgerblue',
+		'--gradient-beige-tomato',
+		'--gradient-orange-yellow',
+		'--gradient-skyblue-royalblue',
+		'--gradient-crimson-deeppink',
+		'--gradient-red-orangered',
+		'--gradient-gold-darkorange',
+		'--gradient-deepskyblue-blue',
+		'--gradient-darkorchid-darkviolet',
+		'--gradient-firebrick-sienna',
+		'--gradient-darkorange-coral',
+		'--gradient-steelblue-cornflowerblue',
+		'--gradient-palevioletred-hotpink',
+	]
+
 	// setup to generate a new tile for each thing about me
 	let animationDelay = 0
 	const ANIMATION_DELAY_INTERVAL = 0.3 // seconds
 	const imgDir = 'img'
-	
+
 	// build the new nodes, set attributes, and populate them with things about me
 	for (let i = 0; i < thingsAboutMe.length; i++) {
-
 		const thisThing = thingsAboutMe[i]
 
 		const tile = document.createElement('article')
@@ -57,7 +56,7 @@ async function populateCards() {
 
 		const cardFront = document.createElement('section')
 		cardFront.className = 'card-front'
-		
+
 		const cardBack = document.createElement('section')
 		cardBack.className = 'card-back'
 
@@ -89,13 +88,11 @@ async function populateCards() {
 		const bgColorBack = bgColorFront
 		cardFront.style.backgroundImage = bgColorFront
 		// add a bg image + a translucent gradient atop it
-		cardBack.style.background =
-			`linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), ${bgColorBack}, url(${imgDir}/${thisThing['img']})`
+		cardBack.style.background = `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), ${bgColorBack}, url(${imgDir}/${thisThing['img']})`
 		cardBack.style.backgroundPosition = 'center'
 		cardBack.style.backgroundSize = '100%'
 	}
 }
-
 
 async function fetchJSONdata() {
 	let thingsAboutMe = null
@@ -131,10 +128,10 @@ function randomChoiceFromArray(array) {
 }
 
 function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
+	for (let i = array.length - 1; i > 0; i--) {
+		let j = Math.floor(Math.random() * (i + 1))
+		;[array[i], array[j]] = [array[j], array[i]]
+	}
 }
 
 /* Returns an array of YouTube url strings from the 'text' property of a JSON thingAboutMe. Assumes thisThing.text has video links. 
@@ -172,11 +169,12 @@ function alertIfAppleLowPowerMode() {
 	setTimeout(() => {
 		// after 3 seconds, if the bg video is still paused, its likely because the device is in low power mode -- alert the user sarcastically
 		if (bgVideo.paused) {
-			alert("I think I've detected low power mode on your device. If my eyebrows aren't doing the wave (or you can't see my face), I'm probably right, and you should probably turn that off, wait 5-10 seconds, then refresh the page. It's totally worth the battery drain.")
+			alert(
+				"I think I've detected low power mode on your device. If my eyebrows aren't doing the wave (or you can't see my face), I'm probably right, and you should probably turn that off, wait 5-10 seconds, then refresh the page. It's totally worth the battery drain."
+			)
 		}
 	}, 3000)
 }
-
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -185,8 +183,3 @@ populateCards()
 
 // had to go 2nd as black space would load instead of bg vid, otherwise
 alertIfAppleLowPowerMode()
-
-
-
-
-

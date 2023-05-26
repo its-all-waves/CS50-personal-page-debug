@@ -389,7 +389,10 @@ https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
 /* Style the video: 100% width and height to cover the entire window */
 #background-video {
   height: 100%;
-  width: 100%;
+  width: fit-content;
+ 
+  /* Center my face on the screen and stretch the vid back to compensate */
+  margin-left: -60px;
   object-fit: cover;
 }
 
@@ -401,14 +404,6 @@ https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
   height: 100svh;
   overflow: hidden;
   background-color: black; 
-}
-
-/* On small screen widths, video looked a bit off-center. This corrects. */
-@media screen and (max-width: 500px) {
-  #background-video {
-    transform: translateX(-36px) !important;
-    width: fit-content;
-  }  
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
