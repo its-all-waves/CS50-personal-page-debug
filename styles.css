@@ -155,35 +155,6 @@ main {
     inset 0 10px 10px hsla(0, 0%, 0%, 0.367);
 }
 
-main article {
-}
-
-.tile {
-  width: 300px;
-  aspect-ratio: 1/1;
-  margin: 1em;
-  animation: shake-n-wave ease 24s infinite;
-}
-
-@keyframes shake-n-wave {
-  0% { transform: translate(0px, 0px) rotate(0deg) translate3d(0,0,0); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg) translate3d(0,-25px,0); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(0px, 0px) rotate(0deg) translate3d(0,0,0); }
-}
-
-section img {
-  max-width: 66%;
-  max-height: 66%;
-}
-
 .credits {
   text-align: right;
   padding-bottom: 0.1em;
@@ -270,6 +241,29 @@ blockquote {
   color: hsl(255, 10%, 80%) 
 }
 
+.container .box {
+  width: 300px;
+  aspect-ratio: 1/1;
+  margin: 1em;
+  animation: shake-n-wave ease 24s infinite;
+  transform-style: preserve-3d;
+  perspective: 1000px
+}
+
+@keyframes shake-n-wave {
+  0% { transform: translate(0px, 0px) rotate(0deg) translate3d(0,0,0); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg) translate3d(0,-25px,0); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg) translate3d(0,0,0); }
+}
+
 .card-front, .card-back {
   border-radius: 15%;
 }
@@ -287,12 +281,10 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* pointer-events: auto; */
 }
 
 .card-front,
-.card-front img,
-.card-back {
+.card-front img {
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -305,19 +297,21 @@ blockquote {
   transform: rotateY(180deg);
   padding: 1.5rem;
   text-shadow: 0 1px 01px #212121;
-  overflow-y: auto;
+
+  /* THE OFFENDING LINE. (overflow-y: ...)
+  On iOS 16.4, I could not tap the links that are on the left side of their container. If the link stretched to the right half of the container, it was tappable. Odd!  */
+  /* overflow-y: scroll; */
   font-size: 21px;
   line-height: 1.4em;
 }
 
 /* .card-back a { */
-.container .box .content div a {
+.container .box .card-back div a {
   color:hsla(0, 0%, 100%, 0.9);
   text-decoration: none;
   font-weight: bolder;
   animation: link-color 18s ease-in-out infinite;
 }
-
 
 @keyframes link-color {
   0%, 100% { color:hsla(0, 0%, 100%, 0.9); }
@@ -327,12 +321,23 @@ blockquote {
 }
 
 /* Hide scrollbars */
-.card-back {
+.card-back div {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-.card-back::-webkit-scrollbar {
+.card-back div::-webkit-scrollbar {
   display: none;
+}
+
+.container .box .body .card-front img {
+  max-width: 66%;
+  max-height: 66%;
+}
+
+.card-back div {
+  text-align: center;
+  height: calc(300px - 45px);
+  overflow-y: auto;
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -363,7 +368,7 @@ article:hover .card-container {
 }
 
 /* Position the front and back side */
-.card-back,
+/* .card-back,
 .card-front {
   position: absolute;
   width: 100%;
@@ -372,20 +377,18 @@ article:hover .card-container {
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-
+ */
 
 /* Attempt to fix the problem with some links not being tappable
 Partially works? but not using rotate: 0 -180deg, only kinda works when using transform: rotateY() */
-.card-back {
+/* .card-back {
   tranform: translateZ(12px);
-}
+} */
 
 .card-back div{
-  position: absolute;
+  /* position: absolute; */
   transform-style: preserve-3d;
-  padding: 20px;
-  background: linear-gradient(45deg, #FE0061,#FFEB3B);
-  transform: translateZ(100px);
+  transform: translateZ(1px);
 }
 
 

@@ -109,15 +109,15 @@ async function populateCards() {
 		const cardBody = document.createElement('div')
 		cardBody.className = 'body'
 		
-		const imgContainer = document.createElement('div')
-		imgContainer.className = 'imgContainer'
+		const cardFront = document.createElement('div')
+		cardFront.className = 'card-front'
 
 		const img = document.createElement('img')
 		img.src = `${imgDir}/${thisThing['img']}`
 		img.alt = thisThing['img_alt']
 
-		const content = document.createElement('div')
-		content.className = 'content'
+		const cardBack = document.createElement('div')
+		cardBack.className = 'card-back'
 
 		const div = document.createElement('div')
 
@@ -129,10 +129,10 @@ async function populateCards() {
 		main.append(container)
 		container.append(box)
 		box.append(cardBody)
-		cardBody.append(imgContainer)
-		imgContainer.append(img)
-		cardBody.append(content)
-		content.append(div)
+		cardBody.append(cardFront)
+		cardFront.append(img)
+		cardBody.append(cardBack)
+		cardBack.append(div)
 		div.append(text)
 
 		
@@ -150,11 +150,11 @@ async function populateCards() {
 		const randomColor = randomChoiceFromArray(bgColors)
 		const bgColorFront = `var(${randomColor})`
 		const bgColorBack = bgColorFront
-		imgContainer.style.backgroundImage = bgColorFront
+		cardFront.style.backgroundImage = bgColorFront
 		// add a bg image + a translucent gradient atop it
-		div.style.background = `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), ${bgColorBack}, url(${imgDir}/${thisThing['img']})`
-		div.style.backgroundPosition = 'center'
-		div.style.backgroundSize = '100%'
+		cardBack.style.background = `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), ${bgColorBack}, url(${imgDir}/${thisThing['img']})`
+		cardBack.style.backgroundPosition = 'center'
+		cardBack.style.backgroundSize = '100%'
 	}
 }
 
@@ -228,7 +228,6 @@ function alertIfAppleLowPowerMode() {
 	) {
 		return
 	}
-	console.log('here')
 	const bgVideo = document.querySelector('#background-video')
 	setTimeout(() => {
 		// after 3 seconds, if the bg video is still paused, its likely because the device is in low power mode -- alert the user sarcastically
