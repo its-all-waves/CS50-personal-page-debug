@@ -43,37 +43,101 @@ async function populateCards() {
 	for (let i = 0; i < thingsAboutMe.length; i++) {
 		const thisThing = thingsAboutMe[i]
 
-		const tile = document.createElement('article')
-		tile.id = thisThing['id']
-		tile.className = 'tile'
-		tile.style.animationDelay = `${animationDelay}s`
-		animationDelay += ANIMATION_DELAY_INTERVAL
+		// const tile = document.createElement('article')
+		// tile.id = thisThing['id']
+		// tile.className = 'tile'
+		// tile.style.animationDelay = `${animationDelay}s`
+		// animationDelay += ANIMATION_DELAY_INTERVAL
 
-		const cardContainer = document.createElement('div')
-		cardContainer.className = 'card-container'
-		// hide this from screen readers as it breaks the semantics (I think?)
-		cardContainer.ariaHidden = 'true'
+		// const cardContainer = document.createElement('div')
+		// cardContainer.className = 'card-container'
+		// // hide this from screen readers as it breaks the semantics (I think?)
+		// cardContainer.ariaHidden = 'true'
 
-		const cardFront = document.createElement('section')
-		cardFront.className = 'card-front'
+		// const cardFront = document.createElement('section')
+		// cardFront.className = 'card-front'
 
-		const cardBack = document.createElement('section')
-		cardBack.className = 'card-back'
+		// const cardBack = document.createElement('section')
+		// cardBack.className = 'card-back'
+
+		// const img = document.createElement('img')
+		// img.src = `${imgDir}/${thisThing['img']}`
+		// img.alt = thisThing['img_alt']
+
+		// const text = document.createElement('p')
+		// // not using .textContent bc it renders html as plaintext -- need links
+		// text.innerHTML = thisThing['text']
+
+		// // put the nodes together for this card
+		// main.append(tile)
+		// tile.append(cardContainer)
+		// cardContainer.append(cardFront, cardBack)
+		// cardFront.append(img)
+		// cardBack.append(text)
+
+
+
+		/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		THE OLD HIERARCHY
+			article.tile
+				.card-container
+					section.card-font
+						img
+					section.card-back
+						p
+
+		THE NEW HIERARCHY FOR FLIPPY CARDS
+			div.container
+				div.box
+					div.body
+						div.imgContainer (card front)
+							img
+						div.content (card back)
+							div
+								p	
+		+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+		
+		const container = document.createElement('div')
+		container.className = 'container'
+
+		const box = document.createElement('div')
+		box.className = 'box'
+		box.id = thisThing['id']
+		box.style.animationDelay = `${animationDelay}s`
+		animationDelay += ANIMATION_DELAY_INTERVAL	
+		
+		const cardBody = document.createElement('div')
+		cardBody.className = 'body'
+		
+		const imgContainer = document.createElement('div')
+		imgContainer.className = 'imgContainer'
 
 		const img = document.createElement('img')
 		img.src = `${imgDir}/${thisThing['img']}`
 		img.alt = thisThing['img_alt']
 
+		const content = document.createElement('div')
+		content.className = 'content'
+
+		const div = document.createElement('div')
+
 		const text = document.createElement('p')
-		// not using .textContent bc it renders html as plaintext -- need links
 		text.innerHTML = thisThing['text']
 
-		// put the nodes together for this card
-		main.append(tile)
-		tile.append(cardContainer)
-		cardContainer.append(cardFront, cardBack)
-		cardFront.append(img)
-		cardBack.append(text)
+
+		// append everything to main
+		main.append(container)
+		container.append(box)
+		box.append(cardBody)
+		cardBody.append(imgContainer)
+		imgContainer.append(img)
+		cardBody.append(content)
+		content.append(div)
+		div.append(text)
+
+		
+		
+		// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 		// TODO: maybe, someday, launch the youtube vids in modals instead of a new tab/window
 
@@ -86,11 +150,11 @@ async function populateCards() {
 		const randomColor = randomChoiceFromArray(bgColors)
 		const bgColorFront = `var(${randomColor})`
 		const bgColorBack = bgColorFront
-		cardFront.style.backgroundImage = bgColorFront
+		imgContainer.style.backgroundImage = bgColorFront
 		// add a bg image + a translucent gradient atop it
-		cardBack.style.background = `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), ${bgColorBack}, url(${imgDir}/${thisThing['img']})`
-		cardBack.style.backgroundPosition = 'center'
-		cardBack.style.backgroundSize = '100%'
+		div.style.background = `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), ${bgColorBack}, url(${imgDir}/${thisThing['img']})`
+		div.style.backgroundPosition = 'center'
+		div.style.backgroundSize = '100%'
 	}
 }
 

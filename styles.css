@@ -310,7 +310,8 @@ blockquote {
   line-height: 1.4em;
 }
 
-.card-back a {
+/* .card-back a { */
+.container .box .content div a {
   color:hsla(0, 0%, 100%, 0.9);
   text-decoration: none;
   font-weight: bolder;
@@ -376,8 +377,15 @@ article:hover .card-container {
 /* Attempt to fix the problem with some links not being tappable
 Partially works? but not using rotate: 0 -180deg, only kinda works when using transform: rotateY() */
 .card-back {
-  /* transform: rotateY(-180deg)  */
   tranform: translateZ(12px);
+}
+
+.card-back div{
+  position: absolute;
+  transform-style: preserve-3d;
+  padding: 20px;
+  background: linear-gradient(45deg, #FE0061,#FFEB3B);
+  transform: translateZ(100px);
 }
 
 
