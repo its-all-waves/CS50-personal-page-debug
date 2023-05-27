@@ -246,8 +246,6 @@ blockquote {
   aspect-ratio: 1/1;
   margin: 1em;
   animation: shake-n-wave ease 24s infinite;
-  transform-style: preserve-3d;
-  perspective: 1000px
 }
 
 @keyframes shake-n-wave {
@@ -346,10 +344,11 @@ https://www.w3schools.com/howto/howto_css_flip_card.asp
 */
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.tile {
+
+.container .box {
+  transform-style: preserve-3d;
+  perspective: 1000px
   /* background-color: transparent; */
-  /* border-radius: 15%; */
-  /* perspective: 1000px; Remove this if you don't want the 3D effect */
   /* pointer-events: auto */
 }
 
@@ -383,14 +382,6 @@ article:hover .card-container {
   transform-style: preserve-3d;
   transform: translateZ(1px);
 }
-
-/* Attempt to fix the problem with some links not being tappable
-Partially works? but not using rotate: 0 -180deg, only kinda works when using transform: rotateY() */
-/* .card-back {
-  tranform: translateZ(12px);
-} */
-
-
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Video background stuff
