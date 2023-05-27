@@ -20,8 +20,8 @@ font-family: 'Gruppo', cursive;
                           hsl(300, 100%, 25%, 0.90) 30%,
                           hsla(252, 100%, 50%, 0.9)); */
   --gradient-purple-pink: linear-gradient(30deg,
-                          hsl(300, 100%, 25%, 0.90) 30%,
-                          hsl(350, 100%, 88%, 0.90));
+                          hsl(300, 100%, 25%, 0.9) 30%,
+                          hsl(350, 100%, 88%, 0.9));
   --gradient-blue-green: linear-gradient(180deg,
                           hsl(153, 91%, 56%) 0%,
                           hsl(203, 100%, 50%) 100%);
@@ -295,7 +295,7 @@ blockquote {
 .card-back {
   color: hsl(255, 10%, 90%);
   transform: rotateY(180deg);
-  padding: 1.5rem;
+  padding: 1.8rem;
   text-shadow: 0 1px 01px #212121;
 
   /* THE OFFENDING LINE. (overflow-y: ...)
@@ -338,6 +338,7 @@ blockquote {
   text-align: center;
   height: calc(300px - 45px);
   overflow-y: auto;
+  border-radius: 6%;
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -346,10 +347,10 @@ https://www.w3schools.com/howto/howto_css_flip_card.asp
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .tile {
-  background-color: transparent;
-  border-radius: 15%;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  pointer-events: auto
+  /* background-color: transparent; */
+  /* border-radius: 15%; */
+  /* perspective: 1000px; Remove this if you don't want the 3D effect */
+  /* pointer-events: auto */
 }
 
 /* This container is needed to position the front and back side */
@@ -367,17 +368,21 @@ article:hover .card-container {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
-/* .card-back,
-.card-front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.card-back,
+.card-front,
+.card-back div {
+  /* position: absolute; */
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
 }
- */
+
+/* Position the front and back side */
+.card-back div{
+  /* position: absolute; */
+  transform-style: preserve-3d;
+  transform: translateZ(1px);
+}
 
 /* Attempt to fix the problem with some links not being tappable
 Partially works? but not using rotate: 0 -180deg, only kinda works when using transform: rotateY() */
@@ -385,11 +390,6 @@ Partially works? but not using rotate: 0 -180deg, only kinda works when using tr
   tranform: translateZ(12px);
 } */
 
-.card-back div{
-  /* position: absolute; */
-  transform-style: preserve-3d;
-  transform: translateZ(1px);
-}
 
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
