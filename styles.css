@@ -12,13 +12,14 @@ font-family: 'Gruppo', cursive;
   src: url("fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf");
 }
 
+/*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Variables
+*/
+
 :root {
   --gradient-purple-blue: linear-gradient(30deg,
                           hsl(300, 100%, 20%, 1) 30%,
                           hsla(252, 100%, 45%, 1));
-  /* --gradient-purple-blue: linear-gradient(30deg,
-                          hsl(300, 100%, 25%, 0.90) 30%,
-                          hsla(252, 100%, 50%, 0.9)); */
   --gradient-purple-pink: linear-gradient(30deg,
                           hsl(300, 100%, 25%, 0.9) 30%,
                           hsl(350, 100%, 88%, 0.9));
@@ -119,7 +120,13 @@ font-family: 'Gruppo', cursive;
 
 }
 
-* {
+/*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+General styles
+*/
+ 
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -227,12 +234,6 @@ dt {
 font-style: italic;
 }
 
-#puerto-rico h2 {
-  font-size: 1.5rem;
-  margin: 0;
-  margin-bottom: -1em;
-}
-
 blockquote {
   padding: 0;
   margin: 0.3em;
@@ -240,6 +241,11 @@ blockquote {
   font-size: 0.9em;
   color: hsl(255, 10%, 80%) 
 }
+
+
+/*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Flippy card styles 
+*/
 
 .container .box {
   width: 300px;
@@ -295,15 +301,13 @@ blockquote {
   transform: rotateY(180deg);
   padding: 1.8rem;
   text-shadow: 0 1px 01px #212121;
-
   /* THE OFFENDING LINE. (overflow-y: ...)
-  On iOS 16.4, I could not tap the links that are on the left side of their container. If the link stretched to the right half of the container, it was tappable. Odd!  */
-  /* overflow-y: scroll; */
+  On iOS 16.4, I could not tap the links that are on the left side of their container. If the link stretched to the right half of the container, it was tappable. Odd!
+  overflow-y: scroll; */
   font-size: 21px;
   line-height: 1.4em;
 }
 
-/* .card-back a { */
 .container .box .card-back div a {
   color:hsla(0, 0%, 100%, 0.9);
   text-decoration: none;
@@ -339,38 +343,65 @@ blockquote {
   border-radius: 6%;
 }
 
-/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-https://www.w3schools.com/howto/howto_css_flip_card.asp
-*/
+#puerto-rico h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: -1em;
+}
 
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Flippy card flippy stuff
+https://bbbootstrap.com/snippets/bootstrap-5-flipping-cards-for-catalog-29291738# */
+
+.container,
+.container .box,
+.container .box .body,
+.card-front,
+.card-back,
+.card-back div {
+    /* transform-style: preserve-3d; */
+}
+
+.container .box .body,
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
 
 .container .box {
-  transform-style: preserve-3d;
   perspective: 1000px
   /* background-color: transparent; */
   /* pointer-events: auto */
 }
 
-/* This container is needed to position the front and back side */
-.card-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+.container .box .body,
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-/* Do a horizontal flip when you move the mouse over the flip box container */
-article:hover .card-container {
-  transform: rotateY(180deg);
+.container .box .body {
+    transition: 0.9s ease;
+}
+
+.container .box:hover .body,
+.container .box .body .card-back {
+    transform: rotateY(180deg);
 }
 
 .card-back,
 .card-front,
 .card-back div {
-  /* position: absolute; */
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -378,8 +409,6 @@ article:hover .card-container {
 
 /* Position the front and back side */
 .card-back div{
-  /* position: absolute; */
-  transform-style: preserve-3d;
   transform: translateZ(1px);
 }
 
