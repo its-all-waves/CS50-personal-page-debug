@@ -97,8 +97,10 @@ async function populateCards() {
 								p	
 		+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 		
-		const container = document.createElement('div')
-		container.className = 'container'
+		// const container = document.createElement('div')
+		// container.className = 'container d-flex align-items-center justify-content-center flex-wrap'
+
+		const container = document.querySelector('.container')
 
 		const box = document.createElement('div')
 		box.className = 'box'
@@ -126,7 +128,7 @@ async function populateCards() {
 
 
 		// append everything to main
-		main.append(container)
+		// main.append(container)
 		container.append(box)
 		box.append(cardBody)
 		cardBody.append(cardFront)

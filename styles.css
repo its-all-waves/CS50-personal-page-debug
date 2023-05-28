@@ -152,10 +152,10 @@ body {
 
 main {
   padding: 2rem;
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   border: 1px solid blue;
   box-shadow: 
     0 10px 10px hsla(0, 0%, 0%, 0.367),
@@ -246,6 +246,11 @@ blockquote {
 /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Flippy card styles 
 */
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+}
 
 .container .box {
   width: 300px;
@@ -354,14 +359,14 @@ Flippy card styles
 Flippy card flippy stuff
 https://bbbootstrap.com/snippets/bootstrap-5-flipping-cards-for-catalog-29291738# */
 
-.container,
+/* .container,
 .container .box,
 .container .box .body,
 .card-front,
 .card-back,
 .card-back div {
-    /* transform-style: preserve-3d; */
-}
+    transform-style: preserve-3d;
+} */
 
 .container .box .body,
 .card-front,
@@ -420,11 +425,7 @@ https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
 /* Style the video: 100% width and height to cover the entire window */
 #background-video {
   height: 100%;
-  width: fit-content;
- 
-  /* Center my face on the screen and stretch the vid back to compensate */
-  margin-left: -60px;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .video-container {
@@ -435,6 +436,12 @@ https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
   height: 100svh;
   overflow: hidden;
   background-color: black; 
+}
+
+@media screen and (max-width: 500px) {
+  .video-container {
+    margin-left: -60px;
+  }  
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -473,6 +480,8 @@ Animated hero title stuff - https://codepen.io/kiran-r-raj/pen/QWvaPwE
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  z-index: 3
 }
 
 .hero-text {
