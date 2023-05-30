@@ -133,7 +133,7 @@ General styles
 html,
 body,
 main {
-  padding: 0; 
+  /* padding: 0;  */
   background-color: #212121;
 }
 
@@ -152,10 +152,10 @@ body {
 
 main {
   padding: 2rem;
-  /* display: flex;
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center; */
+  justify-content: center;
   border: 1px solid blue;
   box-shadow: 
     0 10px 10px hsla(0, 0%, 0%, 0.367),
@@ -247,12 +247,7 @@ blockquote {
 Flippy card styles 
 */
 
-.container {
-  margin: 0 auto;
-  padding: 0;
-}
-
-.container .box {
+main .box {
   width: 300px;
   aspect-ratio: 1/1;
   margin: 1em;
@@ -313,7 +308,7 @@ Flippy card styles
   line-height: 1.4em;
 }
 
-.container .box .card-back div a {
+.cards-container .box .card-back div a {
   color:hsla(0, 0%, 100%, 0.9);
   text-decoration: none;
   font-weight: bolder;
@@ -336,7 +331,7 @@ Flippy card styles
   display: none;
 }
 
-.container .box .body .card-front img {
+.cards-container .box .card-body .card-front img {
   max-width: 66%;
   max-height: 66%;
 }
@@ -368,7 +363,7 @@ https://bbbootstrap.com/snippets/bootstrap-5-flipping-cards-for-catalog-29291738
     transform-style: preserve-3d;
 } */
 
-.container .box .body,
+.cards-container .box .card-body,
 .card-front,
 .card-back {
   position: absolute;
@@ -379,13 +374,13 @@ https://bbbootstrap.com/snippets/bootstrap-5-flipping-cards-for-catalog-29291738
   transform-style: preserve-3d;
 }
 
-.container .box {
+.cards-container .box {
   perspective: 1000px
   /* background-color: transparent; */
   /* pointer-events: auto */
 }
 
-.container .box .body,
+.cards-container .box .card-body,
 .card-front,
 .card-back {
     position: absolute;
@@ -395,12 +390,12 @@ https://bbbootstrap.com/snippets/bootstrap-5-flipping-cards-for-catalog-29291738
     height: 100%;
 }
 
-.container .box .body {
+.cards-container .box .card-body {
     transition: 0.9s ease;
 }
 
-.container .box:hover .body,
-.container .box .body .card-back {
+.cards-container .box:hover .card-body,
+.cards-container .box .card-body .card-back {
     transform: rotateY(180deg);
 }
 
@@ -412,7 +407,7 @@ https://bbbootstrap.com/snippets/bootstrap-5-flipping-cards-for-catalog-29291738
   backface-visibility: hidden;
 }
 
-/* Position the front and back side */
+/* Needed to separate back of card and allow interaction with */
 .card-back div{
   transform: translateZ(1px);
 }
@@ -442,6 +437,27 @@ https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
   .video-container {
     margin-left: -60px;
   }  
+}
+
+*::-webkit-media-controls-panel {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+/* Old shadow dom for play button */
+
+*::-webkit-media-controls-play-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+/* New shadow dom for play button */
+
+/* This one works! */
+
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
