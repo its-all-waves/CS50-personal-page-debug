@@ -199,7 +199,7 @@ main {
   text-decoration-line: overline underline;
 }
 
-footer {
+.site-author {
   text-align: center;
   color: rgb(70, 93, 241);
   font-size: 0.9rem;
@@ -207,18 +207,18 @@ footer {
   text-shadow: 1px 1px 0 black;
 }
 
-footer a {
+.site-author a {
   color: hsl(232, 86%, 61%);
   margin: 0;
   padding: 0;
 }
 
-footer a:hover {
+.site-author a:hover {
   color: hsl(232, 86%, 75%);
   font-size: 1.06em;
 }
 
-footer code {
+.site-author code {
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.11em;
 }
@@ -414,13 +414,13 @@ https://bbbootstrap.com/snippets/bootstrap-5-flipping-cards-for-catalog-29291738
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Video background stuff
-https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
 */
 
-/* Style the video: 100% width and height to cover the entire window */
 #background-video {
-  height: 100%;
-  /* object-fit: cover; */
+  position: absolute;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .video-container {
@@ -430,34 +430,16 @@ https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
   bottom: 0;
   height: 100svh;
   overflow: hidden;
-  background-color: black; 
+  background-color: black;
+
+  /* Not sure what's causing this to be necessary */
+  margin-bottom: -15px;
 }
 
 @media screen and (max-width: 500px) {
   .video-container {
     margin-left: -60px;
   }  
-}
-
-*::-webkit-media-controls-panel {
-  display: none!important;
-  -webkit-appearance: none;
-}
-
-/* Old shadow dom for play button */
-
-*::-webkit-media-controls-play-button {
-  display: none!important;
-  -webkit-appearance: none;
-}
-
-/* New shadow dom for play button */
-
-/* This one works! */
-
-*::-webkit-media-controls-start-playback-button {
-  display: none!important;
-  -webkit-appearance: none;
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
