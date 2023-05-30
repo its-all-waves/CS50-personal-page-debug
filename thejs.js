@@ -188,7 +188,9 @@ NOTE: Stopped short of using this with the goal of creating modals for each yout
 		) {
 			return
 		}
+
 		const bgVideo = document.querySelector('#background-video')
+		bgVideo.controls
 
 		setTimeout(() => {
 			// after 3 seconds, if the bg video is still paused, its likely because the device is in low power mode -- alert the user sarcastically
