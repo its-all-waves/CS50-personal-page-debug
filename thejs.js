@@ -194,8 +194,6 @@ NOTE: Stopped short of using this with the goal of creating modals for each yout
 
 		setTimeout(() => {
 			// after 3 seconds, if the bg video is still paused, its likely because the device is in low power mode -- alert the user sarcastically
-			// TODO: if video paused and in-view
-			// if (bgVideo.paused) {
 			if (
 				bgVideo.currentTime === 0 &&
 				bgVideo.paused &&
