@@ -25,8 +25,7 @@
 
 <body>
 
-	<div class="hero">
-
+	<header class="hero" role="banner">
 		<!-- animated title ::: https://codepen.io/kiran-r-raj/pen/QWvaPwE -->
 		<div class="hero-title">
 			<div class="hero-text">
@@ -47,7 +46,6 @@
 				<span style="--i:15">s</span>
 			</div>
 		</div>
-
 		<!-- video background -->
 		<div class="video-container">
 			<video playsinline autoplay muted loop id="background-video">
@@ -55,81 +53,26 @@
 				<source src="img/facetv_360.mp4" type="video/mp4">
 			</video>
 		</div>
+	</header>
 
-	</div>
-
-	<!-- .d-flex, .flex-wrap, .container are BOOTSTRAP V5 classes -->	
-	<main class="d-flex flex-wrap gradient">
-		<div class="container d-flex align-items-center justify-content-center flex-wrap"></div>
+	<main class="gradient">
+		<!--  BOOTSTRAP V5 classes -->	
+		<div class="cards-container d-flex align-items-center justify-content-center flex-wrap"></div>
 	</main>
 
-	<section class="credits">
-		<h1>Borrowed</h1>
-		<ul></ul>
-	</section>
-
 	<footer>
-		Created by <a href="https://github.com/its-all-waves" target="_blank">Ian Painter</a> for <a
-			href="https://cs50.harvard.edu/x/" target="_blank">Harvard CS50X</a> • <a href="https://cs50.harvard.edu/x/2023"
-			target="_blank">2023</a> • <a href="https://cs50.harvard.edu/x/2023/weeks/8/" target="_blank">week 8</a> • <a
-			href="https://cs50.harvard.edu/x/2023/psets/8/homepage/" target="_blank"><code>homepage</code></a>.
+		<section class="credits">
+			<h1>Borrowed</h1>
+			<ul></ul>
+		</section>
+		<section class="site author">
+			Created by <a href="https://github.com/its-all-waves" target="_blank">Ian Painter</a> for <a
+				href="https://cs50.harvard.edu/x/" target="_blank">Harvard CS50X</a> • <a href="https://cs50.harvard.edu/x/2023"
+				target="_blank">2023</a> • <a href="https://cs50.harvard.edu/x/2023/weeks/8/" target="_blank">week 8</a> • <a
+				href="https://cs50.harvard.edu/x/2023/psets/8/homepage/" target="_blank"><code>homepage</code></a>.
+		</section>
 	</footer>
-
 	
-
-	<!-- <div class="container d-flex align-items-center justify-content-center flex-wrap">
-		<div class="box">
-			<div class="body">
-				<div class="imgContainer">
-					<img
-						src="https://images.pexels.com/photos/3601422/pexels-photo-3601422.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-						alt="">
-				</div>
-				<div class="content d-flex flex-column align-items-center justify-content-center">
-					<div>
-						<h3 class="text-white fs-5">Post Title</h3>
-						<p class="fs-6 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque,
-							rem provident ex. Laboriosam perspiciatis modi <a href="https://www.youtube.com/watch?v=VJxcJqQG6lI&amp;t=318s" target="_blank">Singularity</a> in?</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="box">
-			<div class="body">
-				<div class="imgContainer">
-					<img
-						src="https://images.pexels.com/photos/1532771/pexels-photo-1532771.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-						alt="">
-				</div>
-				<div class="content d-flex flex-column align-items-center justify-content-center">
-					<div>
-						<h3 class="text-white fs-5">Post Title</h3>
-						<p class="fs-6 text-white">Lorem ipsum dolor sit amet <a href="https://www.youtube.com/watch?v=VJxcJqQG6lI&amp;t=318s" target="_blank">Singularity</a> adipisicing elit. Explicabo sed cum neque,
-							rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="box">
-			<div class="body">
-				<div class="imgContainer">
-					<img
-						src="https://images.pexels.com/photos/573238/pexels-photo-573238.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-						alt="">
-				</div>
-				<div class="content d-flex flex-column align-items-center justify-content-center">
-					<div>
-						<h3 class="text-white fs-5">Post Title</h3>
-						<p class="fs-6 text-white"><a href="https://www.youtube.com/watch?v=VJxcJqQG6lI&amp;t=318s" target="_blank">Singularity</a> ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque,
-							rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-
-
 	<script src="thejs.js"></script>
 </body>
 
