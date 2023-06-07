@@ -229,14 +229,22 @@ blockquote {
   margin: 3em;
 }
 
+
+#red-wave,
+#green-wave,
+#blue-wave,
+#menu-home-button {
+  min-width: 300px;
+  max-height: 50%;
+}
+
 #red-wave,
 #green-wave,
 #blue-wave {
-  width: 21%;
   /* superimposes the three waves */
   position: absolute;
   filter: drop-shadow(-6px -6px 1px rgb(209, 9, 219)) drop-shadow(6px 6px 1px rgb(46, 11, 225));
-  transform-origin: top;
+  transform-origin: center;
 }
 
 #red-wave {
@@ -306,7 +314,20 @@ https://codepen.io/bts/pen/BygMzB
   margin: 0;
   padding: 0;
   overflow: hidden;
+  position: fixed;
 }
+
+
+
+
+/*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Menu button
+*/
+
+#menu-home-button {
+  width: 25%;
+}
+
 
 
 /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
