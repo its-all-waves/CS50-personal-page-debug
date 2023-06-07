@@ -18,112 +18,81 @@ Variables
 
 :root {
   --gradient-purple-blue: linear-gradient(30deg,
-                          hsl(300, 100%, 20%, 1) 30%,
-                          hsla(252, 100%, 45%, 1));
+      hsl(300, 100%, 20%, 1) 30%,
+      hsla(252, 100%, 45%, 1));
   --gradient-purple-pink: linear-gradient(30deg,
-                          hsl(300, 100%, 25%, 0.9) 30%,
-                          hsl(350, 100%, 88%, 0.9));
+      hsl(300, 100%, 25%, 0.9) 30%,
+      hsl(350, 100%, 88%, 0.9));
   --gradient-blue-green: linear-gradient(180deg,
-                          hsl(153, 91%, 56%) 0%,
-                          hsl(203, 100%, 50%) 100%);
+      hsl(153, 91%, 56%) 0%,
+      hsl(203, 100%, 50%) 100%);
   --gradient-pink-green: linear-gradient(to top,
-                          hsl(210, 27%, 87%, 0.9) 0%,
-                          hsl(350, 100%, 84%, 0.9) 0%,
-                          hsl(111, 100%, 87%, 0.9) 100%);
+      hsl(210, 27%, 87%, 0.9) 0%,
+      hsl(350, 100%, 84%, 0.9) 0%,
+      hsl(111, 100%, 87%, 0.9) 100%);
   --gradient-yellow-pink: linear-gradient(-225deg,
-                          hsl(42, 100%, 81%, 0.9) 0%,
-                          hsl(6, 100%, 81%, 0.9) 48%,
-                          hsl(343, 100%, 72%, 0.9) 100%);
+      hsl(42, 100%, 81%, 0.9) 0%,
+      hsl(6, 100%, 81%, 0.9) 48%,
+      hsl(343, 100%, 72%, 0.9) 100%);
   --gradient-pink-green2: linear-gradient(-20deg,
-                          hsl(306, 60%, 59%, 0.9) 0%,
-                          hsl(158, 71%, 48%, 0.9) 100%);
+      hsl(306, 60%, 59%, 0.9) 0%,
+      hsl(158, 71%, 48%, 0.9) 100%);
   --gradient-blue-green: linear-gradient(to right,
-                          hsl(126, 98%, 78%, 0.9) 0%,
-                          hsl(193, 100%, 50%, 0.9) 100%);
+      hsl(126, 98%, 78%, 0.9) 0%,
+      hsl(193, 100%, 50%, 0.9) 100%);
 
---gradient-coral-peachpuff: linear-gradient(
-  132deg,
-  hsla(14, 100%, 75%, 0.9),
-  hsla(28, 100%, 82%, 0.9)
-);
---gradient-atomictangerine-salmon: linear-gradient(
-  311deg,
-  hsla(20, 100%, 70%, 0.9),
-  hsla(0, 100%, 70%, 0.9)
-);
---gradient-limegreen-dodgerblue: linear-gradient(
-  248deg,
-  hsla(135, 100%, 50%, 0.9),
-  hsla(210, 100%, 56%, 0.9)
-);
---gradient-beige-tomato: linear-gradient(
-  355deg,
-  hsla(72, 44%, 90%, 0.9),
-  hsla(9, 100%, 64%, 0.9)
-);
-/* IS THIS ONE FUCKED? */
---gradient-orange-yellow: linear-gradient(
-  75deg,
-  hsla(36, 100%, 52%, 0.9),
-  hsla(52, 100%, 50%)
-);
---gradient-skyblue-royalblue: linear-gradient(
-  299deg,
-  hsla(204, 93%, 67%, 0.9),
-  hsla(225, 73%, 57%, 0.9)
-);
---gradient-crimson-deeppink: linear-gradient(
-  145deg,
-  hsla(348, 83%, 58%, 0.9),
-  hsla(327, 64%, 42%, 0.9)
-);
---gradient-red-orangered: linear-gradient(
-  222deg,
-  hsla(16, 100%, 59%, 0.9),
-  hsla(20, 100%, 70%, 0.9)
-);
---gradient-gold-darkorange: linear-gradient(
-  39deg,
-  hsla(45, 96%, 58%, 0.9),
-  hsla(17, 100%, 59%, 0.9)
-);
---gradient-deepskyblue-blue: linear-gradient(
-  106deg,
-  hsla(195, 100%, 50%, 0.9),
-  hsla(240, 100%, 50%, 0.9)
-);
---gradient-darkorchid-darkviolet: linear-gradient(
-  293deg,
-  hsla(282, 80%, 58%, 0.9),
-  hsla(274, 100%, 41%, 0.9)
-);
---gradient-firebrick-sienna: linear-gradient(
-  84deg,
-  hsla(0, 68%, 34%, 0.9),
-  hsla(19, 56%, 40%, 0.9)
-);
---gradient-darkorange-coral: linear-gradient(
-  13deg,
-  hsla(33, 100%, 50%, 0.9),
-  hsla(16, 100%, 66%, 0.9)
-);
---gradient-steelblue-cornflowerblue: linear-gradient(
-  84deg,
-  hsla(207, 44%, 49%, 0.9),
-  hsla(219, 79%, 66%, 0.9)
-);
---gradient-palevioletred-hotpink: linear-gradient(
-  13deg,
-  hsla(340, 60%, 65%, 0.9),
-  hsla(330, 100%, 71%, 0.9)
-);
-
+  --gradient-coral-peachpuff: linear-gradient(132deg,
+      hsla(14, 100%, 75%, 0.9),
+      hsla(28, 100%, 82%, 0.9));
+  --gradient-atomictangerine-salmon: linear-gradient(311deg,
+      hsla(20, 100%, 70%, 0.9),
+      hsla(0, 100%, 70%, 0.9));
+  --gradient-limegreen-dodgerblue: linear-gradient(248deg,
+      hsla(135, 100%, 50%, 0.9),
+      hsla(210, 100%, 56%, 0.9));
+  --gradient-beige-tomato: linear-gradient(355deg,
+      hsla(72, 44%, 90%, 0.9),
+      hsla(9, 100%, 64%, 0.9));
+  /* IS THIS ONE FUCKED? */
+  --gradient-orange-yellow: linear-gradient(75deg,
+      hsla(36, 100%, 52%, 0.9),
+      hsla(52, 100%, 50%));
+  --gradient-skyblue-royalblue: linear-gradient(299deg,
+      hsla(204, 93%, 67%, 0.9),
+      hsla(225, 73%, 57%, 0.9));
+  --gradient-crimson-deeppink: linear-gradient(145deg,
+      hsla(348, 83%, 58%, 0.9),
+      hsla(327, 64%, 42%, 0.9));
+  --gradient-red-orangered: linear-gradient(222deg,
+      hsla(16, 100%, 59%, 0.9),
+      hsla(20, 100%, 70%, 0.9));
+  --gradient-gold-darkorange: linear-gradient(39deg,
+      hsla(45, 96%, 58%, 0.9),
+      hsla(17, 100%, 59%, 0.9));
+  --gradient-deepskyblue-blue: linear-gradient(106deg,
+      hsla(195, 100%, 50%, 0.9),
+      hsla(240, 100%, 50%, 0.9));
+  --gradient-darkorchid-darkviolet: linear-gradient(293deg,
+      hsla(282, 80%, 58%, 0.9),
+      hsla(274, 100%, 41%, 0.9));
+  --gradient-firebrick-sienna: linear-gradient(84deg,
+      hsla(0, 68%, 34%, 0.9),
+      hsla(19, 56%, 40%, 0.9));
+  --gradient-darkorange-coral: linear-gradient(13deg,
+      hsla(33, 100%, 50%, 0.9),
+      hsla(16, 100%, 66%, 0.9));
+  --gradient-steelblue-cornflowerblue: linear-gradient(84deg,
+      hsla(207, 44%, 49%, 0.9),
+      hsla(219, 79%, 66%, 0.9));
+  --gradient-palevioletred-hotpink: linear-gradient(13deg,
+      hsla(340, 60%, 65%, 0.9),
+      hsla(330, 100%, 71%, 0.9));
 }
 
 /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 General styles
 */
- 
+
 *,
 ::before,
 ::after {
@@ -141,7 +110,9 @@ html,
 body,
 p,
 h1,
-.card-back { margin: 0; }
+.card-back {
+  margin: 0;
+}
 
 body {
   font-family: 'Comfortaa', cursive;
@@ -157,7 +128,7 @@ main {
   align-items: center;
   justify-content: center;
   border: 1px solid blue;
-  box-shadow: 
+  box-shadow:
     0 10px 10px hsla(0, 0%, 0%, 0.367),
     inset 0 10px 10px hsla(0, 0%, 0%, 0.367);
 }
@@ -231,7 +202,7 @@ dl {
 }
 
 dt {
-font-style: italic;
+  font-style: italic;
 }
 
 blockquote {
@@ -239,9 +210,77 @@ blockquote {
   margin: 0.3em;
   font-style: italic;
   font-size: 0.9em;
-  color: hsl(255, 10%, 80%) 
+  color: hsl(255, 10%, 80%)
 }
 
+
+
+/* Bootstrap overrides */
+.offcanvas,
+.offcanvas-lg,
+.offcanvas-md,
+.offcanvas-sm,
+.offcanvas-xl,
+.offcanvas-xxl {
+  --bs-offcanvas-height: auto;
+}
+
+#menu-button {
+  margin: 3em;
+}
+
+#red-wave,
+#green-wave,
+#blue-wave {
+  width: 21%;
+  /* superimposes the three waves */
+  position: absolute;
+  filter: drop-shadow(-3px -3px 1px rgb(209, 9, 219)) drop-shadow(3px 3px 1px rgb(46, 11, 225));
+}
+
+#red-wave {
+  animation: 1s ease-in-out red-wave-slide, 6s ease-in-out infinite waves-fade;
+  translate: var(--red-wave-final-pos)
+}
+
+#green-wave {
+  animation: 1s ease-in-out green-wave-slide, 6s ease-in-out 1s infinite waves-fade;
+  translate: var(--green-wave-final-pos)
+}
+
+#blue-wave {
+  animation: 1s ease-in-out blue-wave-slide, 6s ease-in-out 2s infinite waves-fade;
+  translate: var(--blue-wave-final-pos)
+}
+
+:root {
+  --red-wave-final-pos: 0 0;
+  --green-wave-final-pos: 0 calc(85%);
+  --blue-wave-final-pos: 0 calc(135%);
+  --red-wave-start-pos: 0 0;
+  --green-wave-start-pos: 0 0;
+  --blue-wave-start-pos: 0 0;
+}
+
+@keyframes red-wave-slide {
+  0%, 50% { translate: var(--red-wave-start-pos); }
+  100% { translate: var(--red-wave-final-pos); }
+}
+
+@keyframes green-wave-slide {
+  0%, 50% { translate: var(--green-wave-start-pos); }
+  100% { translate: var(--green-wave-final-pos); }
+}
+
+@keyframes blue-wave-slide {
+  0%, 50% { translate: var(--blue-wave-start-pos); } 
+  100% { translate: var(--blue-wave-final-pos); }
+}
+
+@keyframes waves-fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.33; }
+}
 
 /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Flippy card styles 
@@ -255,29 +294,63 @@ main .box {
 }
 
 @keyframes shake-n-wave {
-  0% { transform: translate(0px, 0px) rotate(0deg) translate3d(0,0,0); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg) translate3d(0,-25px,0); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(0px, 0px) rotate(0deg) translate3d(0,0,0); }
+  0% {
+    transform: translate(0px, 0px) rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg) translate3d(0, -25px, 0);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(0px, 0px) rotate(0deg) translate3d(0, 0, 0);
+  }
 }
 
-.card-front, .card-back {
+.card-front,
+.card-back {
   border-radius: 15%;
 }
 
-/* Only need shadow on front, specifically, but adding to back solves a problem with graphical artifacting at the edges of the tile, during animation. It also doubles the shadow upone card reversal. */ 
-.card-front, .card-back {
+/* Only need shadow on front, specifically, but adding to back solves a problem with graphical artifacting at the edges of the tile, during animation. It also doubles the shadow upone card reversal. */
+.card-front,
+.card-back {
   box-shadow: inset 0px 2px 1px hsla(0, 0%, 100%, 0.291),
-              inset 0px -1px 1px hsla(0, 0%, 0%, 0.551),
-                    0px 3px 6px hsla(0, 0%, 0%, 0.343),
-                    0px 6px 12px hsla(0, 0%, 0%, 0.134);
+    inset 0px -1px 1px hsla(0, 0%, 0%, 0.551),
+    0px 3px 6px hsla(0, 0%, 0%, 0.343),
+    0px 6px 12px hsla(0, 0%, 0%, 0.134);
 }
 
 .card-front {
@@ -309,24 +382,40 @@ main .box {
 }
 
 .cards-container .box .card-back div a {
-  color:hsla(0, 0%, 100%, 0.9);
+  color: hsla(0, 0%, 100%, 0.9);
   text-decoration: none;
   font-weight: bolder;
   animation: link-color 18s ease-in-out infinite;
 }
 
 @keyframes link-color {
-  0%, 100% { color:hsla(0, 0%, 100%, 0.9); }
-  25% { color: hsl(17, 80%, 60%, 0.9); }
-  50% { color:hsla(0, 0%, 100%, 0.9); }
-  75% { color:hsl(167, 80%, 60%, 0.9); }
+
+  0%,
+  100% {
+    color: hsla(0, 0%, 100%, 0.9);
+  }
+
+  25% {
+    color: hsl(17, 80%, 60%, 0.9);
+  }
+
+  50% {
+    color: hsla(0, 0%, 100%, 0.9);
+  }
+
+  75% {
+    color: hsl(167, 80%, 60%, 0.9);
+  }
 }
 
 /* Hide scrollbars */
 .card-back div {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
+
 .card-back div::-webkit-scrollbar {
   display: none;
 }
@@ -376,27 +465,27 @@ https://bbbootstrap.com/snippets/bootstrap-5-flipping-cards-for-catalog-29291738
 
 .cards-container .box {
   perspective: 1000px
-  /* background-color: transparent; */
-  /* pointer-events: auto */
+    /* background-color: transparent; */
+    /* pointer-events: auto */
 }
 
 .cards-container .box .card-body,
 .card-front,
 .card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .cards-container .box .card-body {
-    transition: 0.9s ease;
+  transition: 0.9s ease;
 }
 
 .cards-container .box:hover .card-body,
 .cards-container .box .card-body .card-back {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .card-back,
@@ -408,7 +497,7 @@ https://bbbootstrap.com/snippets/bootstrap-5-flipping-cards-for-catalog-29291738
 }
 
 /* Needed to separate back of card and allow interaction with */
-.card-back div{
+.card-back div {
   transform: translateZ(1px);
 }
 
@@ -439,7 +528,7 @@ Video background stuff
 @media screen and (max-width: 500px) {
   .video-container {
     margin-left: -60px;
-  }  
+  }
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -447,7 +536,7 @@ Animated background gradient stuff
 */
 
 .gradient {
-  background: linear-gradient(33deg, rgba(48,207,208,1), rgb(81, 0, 255), rgba(51,8,103,1) 80%);
+  background: linear-gradient(33deg, rgba(48, 207, 208, 1), rgb(81, 0, 255), rgba(51, 8, 103, 1) 80%);
   background-size: 400% 100%;
   animation: gradient-fade 24s ease infinite;
   height: 100%;
@@ -457,9 +546,11 @@ Animated background gradient stuff
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -493,7 +584,7 @@ Animated hero title stuff - https://codepen.io/kiran-r-raj/pen/QWvaPwE
 
 .hero-text span {
   font-weight: bolder;
-  text-shadow: 
+  text-shadow:
     0rem 0.6rem 0rem hsl(232, 86%, 40%);
   text-transform: uppercase;
   font-size: 15vw;
@@ -505,18 +596,19 @@ Animated hero title stuff - https://codepen.io/kiran-r-raj/pen/QWvaPwE
 }
 
 @keyframes zoomup {
+
   0%,
   100% {
     transform: scale(1);
-    color:hsla(43, 100%, 51%, 0.607);
+    color: hsla(43, 100%, 51%, 0.607);
     /* opacity: 0; */
     blur: 20px;
   }
 
   50% {
     /* opacity: 1.0; */
-    transform: scale(-1) translateY(-6rem) ;
+    transform: scale(-1) translateY(-6rem);
     filter: blur(1px);
-    color:hsla(232, 86%, 61%, 0.612)
+    color: hsla(232, 86%, 61%, 0.612)
   }
 }
