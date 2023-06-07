@@ -235,28 +235,29 @@ blockquote {
   width: 21%;
   /* superimposes the three waves */
   position: absolute;
-  filter: drop-shadow(-3px -3px 1px rgb(209, 9, 219)) drop-shadow(3px 3px 1px rgb(46, 11, 225));
+  filter: drop-shadow(-6px -6px 1px rgb(209, 9, 219)) drop-shadow(6px 6px 1px rgb(46, 11, 225));
+  transform-origin: top;
 }
 
 #red-wave {
-  animation: 1s ease-in-out red-wave-slide, 6s ease-in-out infinite waves-fade;
+  animation: 1.2s ease-out red-wave-slide, 12s ease-in-out infinite waves-fade;
   translate: var(--red-wave-final-pos)
 }
 
 #green-wave {
-  animation: 1s ease-in-out green-wave-slide, 6s ease-in-out 1s infinite waves-fade;
+  animation: 1.2s ease-out green-wave-slide, 12s ease-in-out 1s infinite waves-fade;
   translate: var(--green-wave-final-pos)
 }
 
 #blue-wave {
-  animation: 1s ease-in-out blue-wave-slide, 6s ease-in-out 2s infinite waves-fade;
+  animation: 1.2s ease-out blue-wave-slide, 12s ease-in-out 2s infinite waves-fade;
   translate: var(--blue-wave-final-pos)
 }
 
 :root {
   --red-wave-final-pos: 0 0;
-  --green-wave-final-pos: 0 calc(85%);
-  --blue-wave-final-pos: 0 calc(135%);
+  --green-wave-final-pos: 0 calc(81%);
+  --blue-wave-final-pos: 0 calc(129%);
   --red-wave-start-pos: 0 0;
   --green-wave-start-pos: 0 0;
   --blue-wave-start-pos: 0 0;
@@ -278,8 +279,21 @@ blockquote {
 }
 
 @keyframes waves-fade {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.33; }
+  0%,
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    filter: drop-shadow(-6px -6px 1px rgb(209, 9, 219)) drop-shadow(6px 6px 1px rgb(46, 11, 225));
+  }
+  50% {
+    opacity: 0.54;
+    filter: blur(3px);
+    scale: 80%;
+    filter: drop-shadow(6px 6px 1px rgb(209, 9, 219)) drop-shadow(-6px -6px 1px rgb(46, 11, 225));
+  }
+  25%, 75% {
+    filter: drop-shadow(-0px -0px 1px rgb(209, 9, 219)) drop-shadow(0px 0px 1px rgb(46, 11, 225));
+  }
 }
 
 /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
