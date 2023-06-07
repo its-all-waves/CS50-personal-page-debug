@@ -257,7 +257,7 @@ blockquote {
 :root {
   --red-wave-final-pos: 0 0;
   --green-wave-final-pos: 0 calc(81%);
-  --blue-wave-final-pos: 0 calc(129%);
+  --blue-wave-final-pos: 0 calc(132%);
   --red-wave-start-pos: 0 0;
   --green-wave-start-pos: 0 0;
   --blue-wave-start-pos: 0 0;
