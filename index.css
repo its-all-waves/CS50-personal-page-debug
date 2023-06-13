@@ -214,6 +214,9 @@ blockquote {
 }
 
 
+/*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Offcanvas menu + buttons
+*
 
 /* Bootstrap overrides */
 .offcanvas,
@@ -229,49 +232,55 @@ blockquote {
   margin: 3em;
 }
 
-
-#red-wave,
-#green-wave,
-#blue-wave,
-#menu-home-button {
-  min-width: 300px;
-  max-height: 50%;
-}
-
-#red-wave,
-#green-wave,
-#blue-wave {
-  /* superimposes the three waves */
-  position: absolute;
-  filter: drop-shadow(-6px -6px 1px rgb(209, 9, 219)) drop-shadow(6px 6px 1px rgb(46, 11, 225));
-  transform-origin: center;
-}
-
-#red-wave {
-  animation: 1.2s ease-out red-wave-slide, 12s ease-in-out infinite waves-fade;
-  translate: var(--red-wave-final-pos)
-}
-
-#green-wave {
-  animation: 1.2s ease-out green-wave-slide, 12s ease-in-out 1s infinite waves-fade;
-  translate: var(--green-wave-final-pos)
-}
-
-#blue-wave {
-  animation: 1.2s ease-out blue-wave-slide, 12s ease-in-out 2s infinite waves-fade;
-  translate: var(--blue-wave-final-pos)
-}
-
 :root {
+  /* --home-button-height: 
   --red-wave-final-pos: 0 0;
   --green-wave-final-pos: 0 calc(81%);
   --blue-wave-final-pos: 0 calc(132%);
   --red-wave-start-pos: 0 0;
   --green-wave-start-pos: 0 0;
-  --blue-wave-start-pos: 0 0;
+  --blue-wave-start-pos: 0 0; */
 }
 
-@keyframes red-wave-slide {
+/* #home-button-container {
+  max-height: 36%; 
+} */
+
+#offcanvas-content {
+  width: 300px;  
+}
+
+#menu-home-button {
+  /* min-width: 270px;
+  height: 100%; */
+}
+
+#red-wave,
+#green-wave,
+#blue-wave,
+#menu-home-button {
+  /* position: absolute; */
+}
+
+#red-wave,
+#green-wave,
+#blue-wave {
+  filter: drop-shadow(-6px -6px 1px rgb(209, 9, 219)) drop-shadow(6px 6px 1px rgb(46, 11, 225));
+}
+
+#red-wave {
+  animation: 12s ease-in-out infinite waves-fade;
+}
+
+#green-wave {
+  animation: 12s ease-in-out 1s infinite waves-fade;
+}
+
+#blue-wave {
+  animation: 12s ease-in-out 2s infinite waves-fade;
+}
+
+/* @keyframes red-wave-slide {
   0%, 50% { translate: var(--red-wave-start-pos); }
   100% { translate: var(--red-wave-final-pos); }
 }
@@ -284,7 +293,7 @@ blockquote {
 @keyframes blue-wave-slide {
   0%, 50% { translate: var(--blue-wave-start-pos); } 
   100% { translate: var(--blue-wave-final-pos); }
-}
+} */
 
 @keyframes waves-fade {
   0%,
@@ -310,24 +319,15 @@ Menu background - flying thru the stars
 https://codepen.io/bts/pen/BygMzB
 */
 
-.field {
+#field {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
-
-
-
-
-/*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Menu button
-*/
-
-#menu-home-button {
-  width: 25%;
-}
-
 
 
 /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

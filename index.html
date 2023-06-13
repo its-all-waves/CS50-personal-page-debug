@@ -76,17 +76,26 @@
 	</footer>
 
 	<!-- OFFCANVAS MENU // SHOW CLASS ADDED FOR DEBUGGING -- REMOVE LATER -->
-	<div class="offcanvas show offcanvas-top align-items-center" tabindex="-1" id="offcanvasMenu" data-bs-theme="dark"
+	<div class="offcanvas show offcanvas-top" tabindex="-1" id="offcanvasMenu" data-bs-theme="dark"
 		aria-labelledby="offcanvasMenuLabel">
-		<!-- HOME BUTTON -->	
-		<img id="menu-home-button" src="img/menu-home-button.svg" alt="Home button.">
-		<!-- RED WAVE -->
-		<img id="red-wave" src="img/2nd-harmonic.svg" alt="A wave of 1 cycle."></img>
-		<!-- GREEN WAVE -->
-		<img id="green-wave" src="img/3rd-harmonic.svg" alt="A wave of 2 cycles."></img>
-		<!-- BLUE WAVE -->
-		<img id="blue-wave" src="img/4th-harmonic.svg" alt="A wave of 3 cycles."></img>
-	
+		
+		<div id="offcanvas-content" class="overflow-auto">
+			<!-- HOME BUTTON -->
+			<div id="home-button-container" class="mx-auto">
+				<img id="menu-home-button" src="img/menu-home-button.svg" alt="Home button.">
+			</div>
+			
+			<div id="wave-buttons-container" class="">
+				<!-- RED WAVE -->
+				<img id="red-wave" src="img/2nd-harmonic_alt.svg" alt="A wave of 1 cycle."></img>
+				<!-- GREEN WAVE -->
+				<img id="green-wave" src="img/3rd-harmonic_alt.svg" alt="A wave of 2 cycles."></img>
+				<!-- BLUE WAVE -->
+				<img id="blue-wave" src="img/4th-harmonic_alt.svg" alt="A wave of 3 cycles."></img>
+			</div>
+		</div>
+
+		<!-- BACKGROUND - FLYING THRU STARS -->
 		<canvas id="field">
 		
 	</div>
@@ -101,3 +110,7 @@
 </body>
 
 </html>
+
+
+
+<!-- the corresponding css animates the waves so that when the offcanvas menu is shown, they are initially superimposed. after a moment they assume their final positions in a column. as you can see, i also have a home button above the 3 waves. there's also a canvas that animates flying thru stars for the background of the menu. before making the home button `position: absolute`, the home button was behaving like a block element with respect to the canvas. the css-animated waves initially loaded right on top of the home button. most of this is giving you information that you may need later in this conversation. what i really want to know is, how can i maintain the css animations on the waves, but have their initial, superimposed position be beneath the home button. in other words, i want the home button and the waves to visually stack in a column in their current order, but keep the animation of the waves' positions relative to each other. does that make sense? -->
