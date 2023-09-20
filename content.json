@@ -1,0 +1,100 @@
+[
+    {
+        "id": "buddhism",
+        "img": "lotus-flower.png",
+        "text": "Being born into <a href='https://www.sokaglobal.org/resources/study-materials/buddhist-study/the-basics-of-nichiren-buddhism-for-the-new-era-of-worldwide-kosen-rufu/chapter-1.html' target='_blank'>Nichiren Daishonin's Buddhism</a>, I was raised around people of many nationalities. <br><br> <a href='https://www.sgi-usa.org/2022/08/07/nam-myoho-renge-kyo/' target='_blank'>Nam-Myoho-Renge-Kyo</a>",
+        "img_alt": "Lotus flower",
+        "img_link": "<a href='https://www.flaticon.com/free-icon/lotus-flower' title='lotus flower icon' target='_blank'><cite>Lotus flower icon created by Freepik - Flaticon</cite></a>"
+    },
+    {
+        "id": "sound",
+        "img": "headphone.png",
+        "text": "The last ~13 years of making <a href='https://open.spotify.com/album/51KHP6tIb9eZ4nDHoILqJW?si=XBAP13OrSBacVRcBFm4v7Q' target='_blank'>records</a> and movies, TV, and <a href='https://www.youtube.com/watch?v=DAdcYtdt6yY' target='_blank'>live music videos</a> as a sound recordist & mixer was fun and challenging, but I'm ready for something new!",
+        "img_alt": "Headphones",
+        "img_link": "<a href='https://www.flaticon.com/free-icons/audio' title='audio icon' target='_blank'><cite>Headphone icon created by Freepik - Flaticon</cite></a>"
+    },
+    {
+        "id": "code",
+        "img": "code.png",
+        "text": "I started programming in Jan 2022. I made my first useful thing that summer and I've been obsessed ever since.",
+        "img_alt": "Laptop with computer code",
+        "img_link": "<a href='https://www.flaticon.com/free-icons/code' title='code icons' target='_blank'><cite>Code icons created by Freepik - Flaticon</cite></a>"
+    },
+    {
+        "id": "waves",
+        "img": "waves-2.png",
+        "text": "Can a wave of sufficient complexity describe literally anything? Are waves the fundamental language of the Universe? <br><br>Waves are a curious commonality -- a sort of unifying principle. Sound | Light | Gravity | Probability. Any changing thing can be described by waves, including the fictions of humans. <br><br>Waves are the language of energy, and energy is information.",
+        "img_alt": "Ocean waves",
+        "img_link": "<a href='https://www.flaticon.com/free-icons/waves' title='waves icon' target='_blank'><cite>Waves icons created by Freepik - Flaticon</cite></a>"
+    },
+    {
+        "id": "animals",
+        "img": "koala.png",
+        "text": "I love animals -- especially <a href='https://www.youtube.com/embed/RCElNUVqYjo' target='_blank'>cute ones</a>!",
+        "img_alt": "Koala bear hugging bamboo",
+        "img_link": "<a href='https://www.flaticon.com/free-icons/animals' title='animals icon' target='_blank'><cite>Animals icons created by Freepik - Flaticon</cite></a>"
+    },
+    {
+        "id": "futurism",
+        "img": "robot.png",
+        "text": "I fantasize about the <a href='https://www.youtube.com/watch?v=VJxcJqQG6lI&t=318s' target='_blank'>Singularity</a> and Ray Kurzweil's <a href='https://www.kurzweilai.net/the-6-epochs-of-levolutio-by-ray-kurzweil#!prettyPhoto' target='_blank'>6 epochs</a> of the evolution of the universe.",
+        "img_alt": "Man and machine",
+        "img_link": "<a href='https://www.flaticon.com/free-icons/robot' title='robot icon' target='_blank'><cite>Robot icons created by max.icons - Flaticon</cite></a>"
+    },
+    {
+        "id": "intersections",
+        "img": "cube.png",
+        "text": "I casually observe, but am propelled through life by fantasies of intersections: <br><ul><li>modern science x ancient mysticism</li><li>a <a href='https://www.youtube.com/watch?v=Cm3iaPqY1a4' target='_blank'>unified theory</a></li><li>man x machine [x matter]</li></ul>",
+        "img_alt": "Three cubes intersecting",
+        "img_link": "<a href='https://www.flaticon.com/free-icons/shape' title='shape icon' target='_blank'><cite>Shape icons created by Freepik - Flaticon</cite></a>"
+    },
+    {
+        "id": "quote-tendrils",
+        "img": "alien.png",
+        "text": "<q>The cosmos is within us. We are made of star-stuff. We are a way for the universe to know itself.</q> <br><br>― <a href='https://www.youtube.com/watch?v=nGanLUnjoPI&t=151s' target='_blank'>Carl Sagan</a>",
+        "img_alt": "!TEMP Computer Terminal",
+        "img_link": "<a href='https://www.flaticon.com/free-icons/alien' title='alien icon' target='_blank'><cite>Alien icons created by Icongeek26 - Flaticon</cite></a>"
+    },
+    {
+        "id": "quote-tendrils2",
+        "img": "big-bang.png",
+        "text": "<q>Through our <a href='https://www.youtube.com/watch?v=TZL682Xn1jI&t=55s' target='_blank'>eyes</a>, the universe is perceiving itself. Through our <a href='https://youtu.be/IQL53eQ0cNA?t=160' target='_blank'>ears</a>, the universe is listening to its harmonies. We are the witnesses through which the universe becomes conscious of its glory, of its magnificence.</q> <br><br>― <cite>Alan Wilson Watts</cite>",
+        "img_alt": "Big Bang!",
+        "img_link": "<a href='https://www.flaticon.com/free-icons/cosmology' title='cosmology icon' target='_blank'><cite>Cosmology icons created by Freepik - Flaticon</cite></a>"
+    },
+    {
+        "id": "quote-funny1",
+        "img": "frog.png",
+        "text": "<q>I have always wanted to be somebody, but I see now I should have been more specific.</q> <br><br>- <cite>Lily Tomlin</cite>",
+        "img_alt": "A frog staring blankly at you.",
+        "img_link": "<a href='https://www.flaticon.com/free-icons/frog' title='frog icon' target='_blank'><cite>Frog icons created by Freepik - Flaticon</cite></a>"
+    },
+    {
+        "id": "cymatics",
+        "img": "flower-of-life.png",
+        "text": "There's got to be something to <a href='https://www.youtube.com/watch?v=Pmsfuj1Rk9c&t=218s' target='_blank'>cymatics</a>! How could it not point to a fundamental truth? <br><br> It gives the impression that sound is responsible for form, or something analogous to sound--a vibrating field, perhaps!",
+        "img_alt": "Flower of Life.",
+        "img_link": "<a href='https://www.flaticon.com/free-icons/flower-of-life' title='flower-of-life icons' target='_blank'><cite>Flower-of-life icons created by Freepik - Flaticon</cite></a>"
+    },
+    {
+        "id": "puerto-rico",
+        "img": "puerto-rico.jpg",
+        "text": "<h2><sup>1</sup>/<sub>2</sub> <a href='https://www.youtube.com/watch?v=cuzN21hZtqI' target=_blank>Boricua</a>.</h2> <br> (boh - ree - kwah) <br><br><dl> <dt>noun</dt> <dd>a Puerto Rican, or person of Puerto Rican descent: <blockquote>He's a proud boricua.</blockquote></dd> <dt>adjective</dt> <dd>of or relating to Puerto Rico or Puerto Ricans: <blockquote>the top ten boricua restaurants in New York;</blockquote><blockquote>The new production of West Side Story will prioritize boricua casting.</blockquote></dd> </dl>",
+        "img_alt": "Puerto Rican flag.",
+        "img_link": "<a href='https://www.flaticon.com/free-icons/puerto-rico' title='Puerto Rico icons' target='_blank'><cite>Puerto Rico icons created by Blak1ta - Flaticon</cite></a>"
+    },
+    {
+        "id": "quote-funny2",
+        "img": "socks.png",
+        "text": "<q>I'll walk around like everything's fine, but deep down, inside my shoe, my sock is sliding off.</q> <br><br>-<cite>unknown</cite>",
+        "img_alt": "Mismatched socks.",
+        "img_link": "<a href='https://www.flaticon.com/free-icons/socks' title='socks icons' target='_blank'><cite>Socks icons created by Freepik - Flaticon</cite></a>"
+    },
+    {
+        "id": "michael-levin",
+        "img": "nanobot.png",
+        "text": "Michael Levin's <a href='https://www.youtube.com/watch?v=XheAMrS8Q1c&t=853s' target='_blank' id='DEBUG'>xenobots</a> and <a href='https://www.youtube.com/watch?v=YnObwxJZpZc&t=9s' target='_blank'><cite>The Computational Boundary of a Self</cite></a> are the most recent phenomenon to blow my mind wide open!",
+        "img_alt": "A nanobot.",
+        "img_link": "<a href='https://www.flaticon.com/free-icons/nano' title='nano icons' target='_blank'><cite>Nano icons created by Eucalyp - Flaticon</cite></a>"
+    }
+]
