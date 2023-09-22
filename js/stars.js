@@ -1,6 +1,9 @@
 // Menu background - flying thru the stars
 // https://codepen.io/bts/pen/BygMzB
 
+/* TODO: wait in a while loop until the menu is visible, then do all of this.
+Upon exit of menu, delete all stars, return to waiting */
+
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
         sURLVariables = sPageURL.split('&'),

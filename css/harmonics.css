@@ -1,16 +1,36 @@
-.svg-container {
-	height: 81vh;
-	background-color: #181818;
-	padding: 1em;
-  margin: 1em;
+/* html, body, main {
+  margin: 0;
+  padding: 0;
+} */
+
+article {
+  max-width: 90vw;
 }
 
-.gradient {
+.card {
+  background-color: #181818;
+}
+
+
+
+
+
+/* .svg-container {
+	background-color: #181818;
+} */
+
+@media screen and (min-width: 800px) {
+  .svg-container {
+    width: 800px;
+  }
+}
+
+/* .gradient {
   background: linear-gradient(33deg, rgba(48,207,208,1), rgb(81, 0, 255), rgba(51,8,103,1) 80%);
   background-size: 400% 100%;
   animation: gradient-fade 24s ease infinite;
   height: 100%;
-}
+} */
 
 
 .gradient1 {
@@ -20,34 +40,29 @@
   height: 100%;
 }
 
-.gradient2 {
+/* .gradient2 {
   background: linear-gradient(33deg, rgba(48,207,208,1), rgb(0, 255, 0), rgba(51,8,103,1) 80%);
   background-size: 400% 100%;
   animation: gradient-fade 24s ease infinite;
   height: 100%;
-}
+} */
 
-.gradient3 {
+/* .gradient3 {
   background: linear-gradient(33deg, rgba(48,207,208,1), rgb(255, 255, 0), rgba(51,8,103,1) 80%);
   background-size: 400% 100%;
   animation: gradient-fade 24s ease infinite;
   height: 100%;
-}
-
-/* .card {
-  --bs-card-bg: #181818;
-	border-radius: 15px;
 } */
 
-#lables {
+/* #lables {
 	fill: red;
-}
+} */
 
-iframe {
+/* iframe {
   display: block;
-}
+} */
 
-.iframe-container {
+/* .iframe-container {
   display: block;
   margin: 1.8em auto;
-}
+} */

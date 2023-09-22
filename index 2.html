@@ -149,8 +149,8 @@
         </footer>
 
         <!-- OFFCANVAS MENU // SHOW CLASS ADDED FOR DEBUGGING -- REMOVE LATER -->
-        <nav
-            class="offcanvas offcanvas-top"
+        <div
+            class="offcanvas offcanvas-top show"
             tabindex="-1"
             id="offcanvasMenu"
             data-bs-theme="dark"
@@ -167,7 +167,6 @@
                         <img
                             id="menu-home-button"
                             src="img/menu-home-button.svg"
-                            title="Go home"
                             alt="Home button." />
                     </a>
                 </div>
@@ -179,8 +178,7 @@
                             id="red-wave"
                             class="m-4"
                             src="img/2nd-harmonic_alt.svg"
-                            title="2nd harmonic"
-                            alt="The 2nd harmonic. A wave of 1 cycle." />
+                            alt="A wave of 1 cycle." />
                     </a>
                     <!-- GREEN WAVE -->
                     <a href="sound-and-matter.html">
@@ -188,8 +186,7 @@
                             id="green-wave"
                             class="m-4"
                             src="img/3rd-harmonic_alt.svg"
-                            title="3rd harmonic"
-                            alt="The 3rd harmonic. A wave of 2 cycles." />
+                            alt="A wave of 2 cycles." />
                     </a>
                     <!-- BLUE WAVE -->
                     <a href="ode-to-waves.html">
@@ -197,19 +194,39 @@
                             id="blue-wave"
                             class="m-4"
                             src="img/4th-harmonic_alt.svg"
-                            title="4th harmonic"
-                            alt="The 4th harmonic. A wave of 3 cycles." />
+                            alt="A wave of 3 cycles." />
                     </a>
                 </div>
             </div>
 
             <!-- BACKGROUND - FLYING THRU STARS -->
             <canvas id="field"></canvas>
-        </nav>
+        </div>
         <!-- END OFFCANVAS MENU -->
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
         <script src="js/stars.js"></script>
         <script src="js/thejs.js"></script>
+        <!-- BOOTSTRAP JS BUNDLE -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+            integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+            crossorigin="anonymous"></script>
     </body>
 </html>
+
+<!-- the corresponding css animates the waves so that when the offcanvas menu is
+shown, they are initially superimposed. after a moment they assume their final
+positions in a column. as you can see, i also have a home button above the 3
+waves. there's also a canvas that animates flying thru stars for the background
+of the menu. before making the home button `position: absolute`, the home button
+was behaving like a block element with respect to the canvas. the css-animated
+waves initially loaded right on top of the home button. most of this is giving
+you information that you may need later in this conversation. what i really want
+to know is, how can i maintain the css animations on the waves, but have their
+initial, superimposed position be beneath the home button. in other words, i
+want the home button and the waves to visually stack in a column in their
+current order, but keep the animation of the waves' positions relative to each
+other. does that make sense? -->
