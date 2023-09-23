@@ -5,7 +5,7 @@
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0" />
-        <title>Ode To Sound</title>
+        <title>Ode To Waves</title>
         <link
             rel="stylesheet"
             href="css/bootstrap.min.css" />
@@ -15,9 +15,6 @@
         <link
             rel="stylesheet"
             href="css/harmonics.css" />
-        <link
-            rel="stylesheet"
-            href="css/vids.css" />
     </head>
     <body class="gradient">
         <div class="main">
@@ -31,7 +28,6 @@
                 <img
                     class="mb-2 mt-5"
                     style="max-width: 240px"
-                    id="menu-home-button"
                     src="img/ufo.gif"
                     title="Jump to the Menu"
                     alt="A hovering, spinning flying saucer that is the Menu button." />
@@ -52,20 +48,22 @@
                     </iframe>
                 </div>
             </article>
-
-            <div class="iframe-container">
-                mechanical impedance matching
-                <iframe
-                    width="560"
-                    height="315"
-                    src=""
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    style="width: 81%">
-                </iframe>
-                1176-1280 ish or thru the end
+            <div
+                class="position-relative"
+                style="height: 500px">
+                <div class="position-absolute bottom-0 end-0">
+                    <picture>
+                        <source
+                            srcset="img/alien-hi.webp"
+                            type="image/webp" />
+                        <img
+                            src="img/alien-hi.gif"
+                            alt="An alien walks onto screen to wave, then leaves." />
+                        <cite class="visually-hidden">
+                            https://giphy.com/stickers/TELYORGANICS-transparent-qlOso7alCUTiAX7aG5
+                        </cite>
+                    </picture>
+                </div>
             </div>
         </div>
 
@@ -74,8 +72,7 @@
             class="offcanvas offcanvas-top"
             tabindex="-1"
             id="offcanvasMenu"
-            data-bs-theme="dark"
-            aria-labelledby="offcanvasMenuLabel">
+            data-bs-theme="dark">
             <div
                 id="offcanvas-content"
                 class="overflow-auto">
@@ -84,8 +81,7 @@
                     <a href="index.html">
                         <img
                             class="mb-4"
-                            width="100%"
-                            id="menu-home-button"
+                            style="width: 100%"
                             src="img/ufo.gif"
                             title="Go home"
                             alt="Home button." />

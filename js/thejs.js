@@ -70,17 +70,17 @@ async function main() {
 			animationDelay += ANIMATION_DELAY_INTERVAL
 
 			const cardBody = document.createElement('article')
-			cardBody.className = 'card-body'
+			cardBody.className = 'flip-card-body'
 
 			const cardFront = document.createElement('div')
-			cardFront.className = 'card-front'
+			cardFront.className = 'flip-card-front'
 
 			const img = document.createElement('img')
 			img.src = `${imgDir}/${thisThing['img']}`
 			img.alt = thisThing['img_alt']
 
 			const cardBack = document.createElement('div')
-			cardBack.className = 'card-back'
+			cardBack.className = 'flip-card-back'
 
 			const div = document.createElement('div')
 
@@ -88,7 +88,6 @@ async function main() {
 			text.innerHTML = thisThing['text']
 
 			// append everything to main
-			// main.append(container)
 			cardsContainer.append(box)
 			box.append(cardBody)
 			cardBody.append(cardFront)
@@ -159,7 +158,7 @@ async function main() {
 		}
 	}
 
-	/* Returns an array of YouTube url strings from the 'text' property of a JSON thingAboutMe. Assumes thisThing.text has video links. 
+	/* Returns an array of YouTube url strings from the 'text' property of a JSON thingAboutMe. Assumes thisThing.text has video links.
 NOTE: Stopped short of using this with the goal of creating modals for each youtube link... maybe one day. */
 	// function getVideoLinksFrom(thisThingText) {
 	// 	// assume thisThing has video links

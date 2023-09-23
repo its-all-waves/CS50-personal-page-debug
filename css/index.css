@@ -1,19 +1,10 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Codystar&family=Comfortaa:wght@500;700&family=Gruppo&display=swap'); */
-/*
-Google Fonts...
-font-family: 'Bungee Outline', cursive;
-font-family: 'Codystar', cursive;
-font-family: 'Comfortaa', cursive;
-font-family: 'Gruppo', cursive;
-*/
-
 @font-face {
   font-family: Comfortaa;
   src: url("../fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf");
 }
 
 /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Variables
+Gradient Variables
 */
 
 :root {
@@ -110,7 +101,7 @@ html,
 body,
 p,
 h1,
-.card-back {
+.flip-card-back {
   margin: 0;
 }
 
@@ -242,25 +233,9 @@ Offcanvas menu + buttons
   --blue-wave-start-pos: 0 0; */
 }
 
-/* #home-button-container {
-  max-height: 36%;
-} */
-
 #offcanvas-content {
   width: 300px;
   margin: auto auto;
-}
-
-#menu-home-button {
-  /* min-width: 270px;
-  height: 100%; */
-}
-
-#red-wave,
-#green-wave,
-#blue-wave,
-#menu-home-button {
-  /* position: absolute; */
 }
 
 #red-wave,
@@ -280,21 +255,6 @@ Offcanvas menu + buttons
 #blue-wave {
   animation: 12s ease-in-out 2s infinite waves-fade;
 }
-
-/* @keyframes red-wave-slide {
-  0%, 50% { translate: var(--red-wave-start-pos); }
-  100% { translate: var(--red-wave-final-pos); }
-}
-
-@keyframes green-wave-slide {
-  0%, 50% { translate: var(--green-wave-start-pos); }
-  100% { translate: var(--green-wave-final-pos); }
-}
-
-@keyframes blue-wave-slide {
-  0%, 50% { translate: var(--blue-wave-start-pos); }
-  100% { translate: var(--blue-wave-final-pos); }
-} */
 
 @keyframes waves-fade {
   0%,
@@ -388,29 +348,29 @@ main .box {
   }
 }
 
-.card-front,
-.card-back {
+.flip-card-front,
+.flip-card-back {
   border-radius: 15%;
 }
 
 /* Only need shadow on front, specifically, but adding to back solves a problem with graphical artifacting at the edges of the tile, during animation. It also doubles the shadow upone card reversal. */
-.card-front,
-.card-back {
+.flip-card-front,
+.flip-card-back {
   box-shadow: inset 0px 2px 1px hsla(0, 0%, 100%, 0.291),
     inset 0px -1px 1px hsla(0, 0%, 0%, 0.551),
     0px 3px 6px hsla(0, 0%, 0%, 0.343),
     0px 6px 12px hsla(0, 0%, 0%, 0.134);
 }
 
-.card-front {
+.flip-card-front {
   color: black;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.card-front,
-.card-front img {
+.flip-card-front,
+.flip-card-front img {
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -418,7 +378,7 @@ main .box {
   user-select: none;
 }
 
-.card-back {
+.flip-card-back {
   color: hsl(255, 10%, 90%);
   transform: rotateY(180deg);
   padding: 1.8rem;
@@ -430,7 +390,7 @@ main .box {
   line-height: 1.4em;
 }
 
-.cards-container .box .card-back div a {
+.cards-container .box .flip-card-back div a {
   color: hsla(0, 0%, 100%, 0.9);
   text-decoration: none;
   font-weight: bolder;
@@ -458,23 +418,23 @@ main .box {
 }
 
 /* Hide scrollbars */
-.card-back div {
+.flip-card-back div {
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
 }
 
-.card-back div::-webkit-scrollbar {
+.flip-card-back div::-webkit-scrollbar {
   display: none;
 }
 
-.cards-container .box .card-body .card-front img {
+.cards-container .box .flip-card-body .flip-card-front img {
   max-width: 66%;
   max-height: 66%;
 }
 
-.card-back div {
+.flip-card-back div {
   text-align: center;
   height: calc(300px - 45px);
   overflow-y: auto;
@@ -492,18 +452,9 @@ main .box {
 Flippy card flippy stuff
 https://bbbootstrap.com/snippets/bootstrap-5-flipping-cards-for-catalog-29291738# */
 
-/* .container,
-.container .box,
-.container .box .body,
-.card-front,
-.card-back,
-.card-back div {
-    transform-style: preserve-3d;
-} */
-
-.cards-container .box .card-body,
-.card-front,
-.card-back {
+.cards-container .box .flip-card-body,
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   top: 0;
   left: 0;
@@ -514,13 +465,11 @@ https://bbbootstrap.com/snippets/bootstrap-5-flipping-cards-for-catalog-29291738
 
 .cards-container .box {
   perspective: 1000px
-  /* background-color: transparent; */
-  /* pointer-events: auto */
 }
 
-.cards-container .box .card-body,
-.card-front,
-.card-back {
+.cards-container .box .flip-card-body,
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   top: 0;
   left: 0;
@@ -528,25 +477,25 @@ https://bbbootstrap.com/snippets/bootstrap-5-flipping-cards-for-catalog-29291738
   height: 100%;
 }
 
-.cards-container .box .card-body {
+.cards-container .box .flip-card-body {
   transition: 0.9s ease;
 }
 
-.cards-container .box:hover .card-body,
-.cards-container .box .card-body .card-back {
+.cards-container .box:hover .flip-card-body,
+.cards-container .box .flip-card-body .flip-card-back {
   transform: rotateY(180deg);
 }
 
-.card-back,
-.card-front,
-.card-back div {
+.flip-card-back,
+.flip-card-front,
+.flip-card-back div {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 /* Needed to separate back of card and allow interaction with */
-.card-back div {
+.flip-card-back div {
   transform: translateZ(1px);
 }
 
@@ -620,15 +569,6 @@ Animated hero title stuff - https://codepen.io/kiran-r-raj/pen/QWvaPwE
   flex-direction: column;
 
   z-index: 3
-}
-
-.hero-text {
-  /* width: 400px;
-  height: 200px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 .hero-text span {
