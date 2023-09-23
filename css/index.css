@@ -270,7 +270,7 @@ Offcanvas menu + buttons
 }
 
 #red-wave {
-  animation: 12s ease-in-out infinite waves-fade;
+  animation: 12s ease-in-out 0s infinite waves-fade;
 }
 
 #green-wave {

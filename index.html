@@ -97,13 +97,22 @@
 
         <main class="gradient">
             <a
-                class="btn btn-primary"
+                class=""
+                style="max-width: 300px"
                 id="menu-button"
                 data-bs-toggle="offcanvas"
                 href="#offcanvasMenu"
                 role="button"
                 aria-controls="offcanvasMenu">
-                open menu
+                <img
+                    width="100%"
+                    id="menu-home-button"
+                    src="img/ufo.gif"
+                    title="Open the menu"
+                    alt="Menu button." />
+                <cite class="visually-hidden">
+                    https://otherplanes.art/nightsky
+                </cite>
             </a>
             <div
                 class="cards-container d-flex align-items-center justify-content-center flex-wrap"></div>
@@ -159,20 +168,16 @@
                 id="offcanvas-content"
                 class="overflow-auto">
                 <!-- HOME BUTTON -->
-                <div
-                    id="home-button-container"
-                    class="m-5">
-                    <!-- TODO: if on index, close upon click, don't navigate -->
+                <div id="wave-buttons-container">
                     <a href="index.html">
                         <img
+                            class="mb-4"
+                            width="100%"
                             id="menu-home-button"
-                            src="img/menu-home-button.svg"
-                            title="Go home"
-                            alt="Home button." />
+                            src="img/ufo.gif"
+                            title="Jump to Home"
+                            alt="A hovering, spinning flying saucer that takes you Home." />
                     </a>
-                </div>
-
-                <div id="wave-buttons-container">
                     <!-- RED WAVE -->
                     <a href="harmonics.html">
                         <img

@@ -8,6 +8,9 @@
         <title>Ode To Sound</title>
         <link
             rel="stylesheet"
+            href="css/bootstrap.min.css" />
+        <link
+            rel="stylesheet"
             href="css/index.css" />
         <link
             rel="stylesheet"
@@ -16,23 +19,119 @@
             rel="stylesheet"
             href="css/vids.css" />
     </head>
-    <body>
-        <main>
+    <body class="gradient">
+        <div class="main">
+            <a
+                class=""
+                id="menu-button"
+                data-bs-toggle="offcanvas"
+                href="#offcanvasMenu"
+                role="button"
+                aria-controls="offcanvasMenu">
+                <img
+                    class="mb-2 mt-5"
+                    style="max-width: 240px"
+                    id="menu-home-button"
+                    src="img/ufo.gif"
+                    title="Jump to the Menu"
+                    alt="A hovering, spinning flying saucer that is the Menu button." />
+            </a>
             <!-- SOUND ANALOGS -->
+            <article class="row p-5 mx-auto">
+                <h1
+                    class="font-monospace fs-5 fw-normal text-end text-white my-2 pl-2">
+                    waves are waves
+                </h1>
+                <div class="card rounded-5">
+                    <div class="card-body">
+                        <div class="ratio ratio-16x9">
+                            <iframe
+                                class="rounded-5"
+                                src="https://www.youtube-nocookie.com/embed/DovunOxlY1k?start=1252"
+                                title="AT&T Archives: Similiarities of Wave Behavior (Bonus Edition)"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
             <div class="iframe-container">
                 mechanical impedance matching
                 <iframe
                     width="560"
                     height="315"
-                    src="https://www.youtube-nocookie.com/embed/DovunOxlY1k?start=1176"
+                    src=""
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
-                    style="width: 81%;">
+                    style="width: 81%">
                 </iframe>
                 1176-1280 ish or thru the end
             </div>
-        </main>
+        </div>
+
+        <!-- OFFCANVAS MENU // SHOW CLASS ADDED FOR DEBUGGING -- REMOVE LATER -->
+        <nav
+            class="offcanvas offcanvas-top"
+            tabindex="-1"
+            id="offcanvasMenu"
+            data-bs-theme="dark"
+            aria-labelledby="offcanvasMenuLabel">
+            <div
+                id="offcanvas-content"
+                class="overflow-auto">
+                <!-- HOME BUTTON -->
+                <div id="wave-buttons-container">
+                    <a href="index.html">
+                        <img
+                            class="mb-4"
+                            width="100%"
+                            id="menu-home-button"
+                            src="img/ufo.gif"
+                            title="Go home"
+                            alt="Home button." />
+                    </a>
+                    <!-- RED WAVE -->
+                    <a href="harmonics.html">
+                        <img
+                            id="red-wave"
+                            class="m-4"
+                            src="img/2nd-harmonic_alt.svg"
+                            title="2nd harmonic"
+                            alt="The 2nd harmonic. A wave of 1 cycle." />
+                    </a>
+                    <!-- GREEN WAVE -->
+                    <a href="sound-and-matter.html">
+                        <img
+                            id="green-wave"
+                            class="m-4"
+                            src="img/3rd-harmonic_alt.svg"
+                            title="3rd harmonic"
+                            alt="The 3rd harmonic. A wave of 2 cycles." />
+                    </a>
+                    <!-- BLUE WAVE -->
+                    <a href="ode-to-waves.html">
+                        <img
+                            id="blue-wave"
+                            class="m-4"
+                            src="img/4th-harmonic_alt.svg"
+                            title="4th harmonic"
+                            alt="The 4th harmonic. A wave of 3 cycles." />
+                    </a>
+                </div>
+            </div>
+
+            <!-- BACKGROUND - FLYING THRU STARS -->
+            <canvas id="field"></canvas>
+        </nav>
+        <!-- END OFFCANVAS MENU -->
+
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/stars.js"></script>
+        <script src="js/thejs.js"></script>
     </body>
 </html>

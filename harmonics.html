@@ -1,111 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" >
+        <meta charset="UTF-8" />
         <meta
             http-equiv="X-UA-Compatible"
-            content="IE=edge" >
+            content="IE=edge" />
         <meta
             name="viewport"
-            content="width=device-width, initial-scale=1.0" >
+            content="width=device-width, initial-scale=1.0" />
         <title>Harmonics</title>
         <link
             rel="stylesheet"
-            href="css/bootstrap.min.css" >
+            href="css/bootstrap.min.css" />
         <link
             rel="stylesheet"
-            href="css/index.css" >
+            href="css/index.css" />
         <link
             rel="stylesheet"
-            href="css/harmonics.css" >
+            href="css/harmonics.css" />
     </head>
 
     <body class="gradient1">
-        <a
-            class="btn btn-primary"
-            id="menu-button"
-            data-bs-toggle="offcanvas"
-            href="#offcanvasMenu"
-            role="button"
-            aria-controls="offcanvasMenu">
-            open menu
-        </a>
-
-        <article class="row p-5 mx-auto">
-            <h1
-                class="font-monospace fs-5 fw-normal text-end text-white my-2 pl-2">
-                all harmonics
-            </h1>
-            <div class="card rounded-5 container-md">
-                <div class="card-body container-sm">
-                    <img
-                        class="card-image-top"
-                        src="img/sawtooth.svg"
-                        title="The constituent sine waves of a sawtooth wave."
-                        alt="The constituent sine waves of a sawtooth wave." >
-                    <p class="card-text">
-                        <cite class="text-secondary">SOURCE</cite>
-                    </p>
-                </div>
-            </div>
-        </article>
-
-        <article class="row p-5 mx-auto">
-            <h1
-                class="font-monospace fs-5 fw-normal text-start text-white my-2 pl-2">
-                odd harmonics
-            </h1>
-            <div class="card rounded-5 container-md">
-                <div class="card-body container-sm">
-                    <img
-                        class="card-image-top"
-                        src="img/squarewave.svg"
-                        title="The constituent sine waves of a sawtooth wave."
-                        alt="The constituent sine waves of a sawtooth wave." >
-                    <p class="card-text">
-                        <cite class="text-secondary">SOURCE</cite>
-                    </p>
-                </div>
-            </div>
-        </article>
-
-        <article class="row p-5 mx-auto">
-            <h1
-                class="font-monospace fs-5 fw-normal text-end text-white my-2 pl-2">
-                polyrhythms visualized and auralized
-            </h1>
-            <div class="card rounded-5 container-md">
-                <div class="card-body container-sm">
-                    <div class="ratio ratio-16x9">
-                        <iframe
-                            src="https://www.youtube-nocookie.com/embed/Lxs4cvSximc?start=55"
-                            title="Poly Rhythms"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                        </iframe>
+        <div class="main">
+            <a
+                class=""
+                id="menu-button"
+                data-bs-toggle="offcanvas"
+                href="#offcanvasMenu"
+                role="button"
+                aria-controls="offcanvasMenu">
+                <img
+                    class="mb-2 mt-5"
+                    style="max-width: 240px"
+                    id="menu-home-button"
+                    src="img/ufo.gif"
+                    title="Jump to the Menu"
+                    alt="A hovering, spinning flying saucer that is the Menu button." />
+            </a>
+            <article class="row p-5 mx-auto">
+                <h1
+                    class="font-monospace fs-5 fw-normal text-end text-white my-2 pl-2">
+                    all harmonics
+                </h1>
+                <div class="card rounded-5">
+                    <div class="card-body">
+                        <img
+                            class="card-image-top"
+                            style="width: 100%; max-height: 80dvh;"
+                            src="img/sawtooth.svg"
+                            title="The constituent sine waves of a sawtooth wave."
+                            alt="The constituent sine waves of a sawtooth wave." />
+                        <p class="card-text">
+                            <cite class="text-secondary">SOURCE</cite>
+                        </p>
                     </div>
                 </div>
-            </div>
-        </article>
-
-        <article class="row p-5 mx-auto">
-            <h1
-                class="font-monospace fs-5 fw-normal text-start text-white my-2 pl-2">
-                beats are rhythm are harmony
-            </h1>
-            <div class="card rounded-5 container-md">
-                <div class="card-body container-sm">
-                    <div class="ratio ratio-16x9">
-                        <iframe
-                            src="https://www.youtube-nocookie.com/embed/P3hdTbtLra4"
-                            title="Perfect 5th - Rhythm Becomes Pitch"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                        </iframe>
+            </article>
+            <article class="row p-5 mx-auto">
+                <h1
+                    class="font-monospace fs-5 fw-normal text-start text-white my-2 pl-2">
+                    odd harmonics
+                </h1>
+                <div class="card rounded-5">
+                    <div class="card-body">
+                        <img
+                            class="card-image-top mt-4"
+                            style="width: 100%; max-height: 80dvh"
+                            src="img/squarewave.svg"
+                            title="The constituent sine waves of a sawtooth wave."
+                            alt="The constituent sine waves of a sawtooth wave." />
+                        <p class="card-text">
+                            <cite class="text-secondary">SOURCE</cite>
+                        </p>
                     </div>
                 </div>
-            </div>
-        </article>
+            </article>
+            <article class="row p-5 mx-auto">
+                <h1
+                    class="font-monospace fs-5 fw-normal text-end text-white my-2 pl-2">
+                    polyrhythms visualized and auralized
+                </h1>
+                <div class="card rounded-5">
+                    <div class="card-body">
+                        <div class="ratio ratio-16x9">
+                            <iframe
+                                class="rounded-5"
+                                src="https://www.youtube-nocookie.com/embed/Lxs4cvSximc?start=55"
+                                title="Poly Rhythms"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="row p-5 mx-auto">
+                <h1
+                    class="font-monospace fs-5 fw-normal text-start text-white my-2 pl-2">
+                    beats are rhythm are harmony
+                </h1>
+                <div class="card rounded-5">
+                    <div class="card-body">
+                        <div class="ratio ratio-16x9">
+                            <iframe
+                                class="rounded-5"
+                                src="https://www.youtube-nocookie.com/embed/P3hdTbtLra4"
+                                title="Perfect 5th - Rhythm Becomes Pitch"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
 
         <!-- OFFCANVAS MENU // SHOW CLASS ADDED FOR DEBUGGING -- REMOVE LATER -->
         <nav
@@ -118,20 +126,16 @@
                 id="offcanvas-content"
                 class="overflow-auto">
                 <!-- HOME BUTTON -->
-                <div
-                    id="home-button-container"
-                    class="m-5">
-                    <!-- TODO: if on index, close upon click, don't navigate -->
+                <div id="wave-buttons-container">
                     <a href="index.html">
                         <img
+                            class="mb-4"
+                            width="100%"
                             id="menu-home-button"
-                            src="img/menu-home-button.svg"
+                            src="img/ufo.gif"
                             title="Go home"
-                            alt="Home button." >
+                            alt="Home button." />
                     </a>
-                </div>
-
-                <div id="wave-buttons-container">
                     <!-- RED WAVE -->
                     <a href="harmonics.html">
                         <img
@@ -139,7 +143,7 @@
                             class="m-4"
                             src="img/2nd-harmonic_alt.svg"
                             title="2nd harmonic"
-                            alt="The 2nd harmonic. A wave of 1 cycle." >
+                            alt="The 2nd harmonic. A wave of 1 cycle." />
                     </a>
                     <!-- GREEN WAVE -->
                     <a href="sound-and-matter.html">
@@ -148,7 +152,7 @@
                             class="m-4"
                             src="img/3rd-harmonic_alt.svg"
                             title="3rd harmonic"
-                            alt="The 3rd harmonic. A wave of 2 cycles." >
+                            alt="The 3rd harmonic. A wave of 2 cycles." />
                     </a>
                     <!-- BLUE WAVE -->
                     <a href="ode-to-waves.html">
@@ -157,7 +161,7 @@
                             class="m-4"
                             src="img/4th-harmonic_alt.svg"
                             title="4th harmonic"
-                            alt="The 4th harmonic. A wave of 3 cycles." >
+                            alt="The 4th harmonic. A wave of 3 cycles." />
                     </a>
                 </div>
             </div>
@@ -165,10 +169,10 @@
             <!-- BACKGROUND - FLYING THRU STARS -->
             <canvas id="field"></canvas>
         </nav>
+        <!-- END OFFCANVAS MENU -->
 
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/stars.js"></script>
-
     </body>
 </html>
