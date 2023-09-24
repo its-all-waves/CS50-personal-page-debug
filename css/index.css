@@ -112,6 +112,12 @@ body {
   line-height: 1.4em;
 }
 
+/* fixes screen able to scroll way off to the left, revealing nothing on the
+right */
+body {
+  overflow-x: hidden;
+}
+
 main {
   padding: 2rem;
   display: flex;
