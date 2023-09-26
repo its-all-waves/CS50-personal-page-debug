@@ -8,7 +8,9 @@
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0" />
-        <title>Harmonics</title>
+
+        <title>∿ Harmonics ∿</title>
+
         <link
             rel="stylesheet"
             href="css/bootstrap.min.css" />
@@ -18,29 +20,66 @@
         <link
             rel="stylesheet"
             href="css/harmonics.css" />
+
+        <!-- favicon  -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="favicon/apple-touch-icon.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="favicon/favicon-32x32.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="favicon/favicon-16x16.png" />
+        <link
+            rel="manifest"
+            href="favicon/site.webmanifest" />
+        <link
+            rel="mask-icon"
+            href="favicon/safari-pinned-tab.svg"
+            color="#5bbad5" />
+        <link
+            rel="shortcut icon"
+            href="favicon/favicon.ico" />
+        <meta
+            name="msapplication-TileColor"
+            content="#da532c" />
+        <meta
+            name="msapplication-config"
+            content="favicon/browserconfig.xml" />
+        <meta
+            name="theme-color"
+            content="#212121" />
     </head>
 
-    <body class="gradient1">
-        <div class="main">
+    <body>
+        <header>
             <a
-                class=""
+                class="mx-3"
                 id="menu-button"
                 data-bs-toggle="offcanvas"
                 href="#offcanvasMenu"
                 role="button"
                 aria-controls="offcanvasMenu">
                 <img
-                    class="mb-2 mt-5"
-                    style="max-width: 240px"
-
+                    class="ufo my-3"
+                    style="max-width: 150px"
                     src="img/ufo.gif"
                     title="Jump to the Menu"
                     alt="A hovering, spinning flying saucer that is the Menu button." />
             </a>
+        </header>
+
+        <div class="main gradient1">
             <article class="row p-5 mx-auto">
                 <h1
                     class="font-monospace fs-5 fw-normal text-end text-white my-2 pl-2">
-                    all harmonics
+                    sawtooth wave
                 </h1>
                 <div class="card rounded-5">
                     <div class="card-body">
@@ -51,7 +90,7 @@
                             title="The constituent sine waves of a sawtooth wave."
                             alt="The constituent sine waves of a sawtooth wave." />
                         <p class="card-text">
-                            <cite class="text-secondary">SOURCE</cite>
+                            <cite class="text-secondary"><a href="https://en.m.wikipedia.org/wiki/File:Fourier_series_square_wave_circles_animation.svg#filelinks">Wikipedia</a></cite>
                         </p>
                     </div>
                 </div>
@@ -59,7 +98,7 @@
             <article class="row p-5 mx-auto">
                 <h1
                     class="font-monospace fs-5 fw-normal text-start text-white my-2 pl-2">
-                    odd harmonics
+                    square wave
                 </h1>
                 <div class="card rounded-5">
                     <div class="card-body">
@@ -70,7 +109,7 @@
                             title="The constituent sine waves of a sawtooth wave."
                             alt="The constituent sine waves of a sawtooth wave." />
                         <p class="card-text">
-                            <cite class="text-secondary">SOURCE</cite>
+                            <cite class="text-secondary"><a href="https://commons.wikimedia.org/wiki/File:Fourier_series_sawtooth_wave_circles_animation.svg#filelinks">Wikipedia</a></cite>
                         </p>
                     </div>
                 </div>
@@ -107,6 +146,41 @@
             </article>
         </div>
 
+        <footer>
+            <section class="site-author">
+                Created by
+                <a
+                    href="https://github.com/its-all-waves"
+                    target="_blank"
+                    >Ian Painter</a
+                >
+                for
+                <a
+                    href="https://cs50.harvard.edu/x/"
+                    target="_blank"
+                    >Harvard cs50x</a
+                >
+                •
+                <a
+                    href="https://cs50.harvard.edu/x/2023"
+                    target="_blank"
+                    >2023</a
+                >
+                •
+                <a
+                    href="https://cs50.harvard.edu/x/2023/weeks/8/"
+                    target="_blank"
+                    >week 8</a
+                >
+                •
+                <a
+                    href="https://cs50.harvard.edu/x/2023/psets/8/homepage/"
+                    target="_blank"
+                    ><code>homepage</code></a
+                >.
+            </section>
+        </footer>
+
         <!-- OFFCANVAS MENU // SHOW CLASS ADDED FOR DEBUGGING -- REMOVE LATER -->
         <nav
             class="offcanvas offcanvas-top"
@@ -120,11 +194,10 @@
                 <div id="wave-buttons-container">
                     <a href="index.html">
                         <img
-                            class="mb-4"
-                            style="width: 100%;"
-
+                            class="ufo mb-4"
+                            style="width: 100%"
                             src="img/ufo.gif"
-                            title="Go home"
+                            title="Jump Home"
                             alt="Home button." />
                     </a>
                     <!-- RED WAVE -->
