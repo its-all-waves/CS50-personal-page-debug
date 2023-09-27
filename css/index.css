@@ -335,9 +335,14 @@ Offcanvas menu + buttons
     }
 }
 
+/* Moving padding here instead of .ufo fixes ufo's display @ index.html in
+Chrome. No problems existed/exist in Firefox. In Chrome, ufo in offcanvas menu is still showing odd artifacts involving the drop shadow (glow), bounding box, and animated canvas background. */
+nav .ufo, header .ufo {
+    padding: 20px; /* keeps drop shadow uncropped by box bounds */
+}
+
 .ufo {
     filter: drop-shadow(0px 0px 20px white);
-    padding: 20px; /* keeps drop shadow uncropped by box bounds */
 }
 
 /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
