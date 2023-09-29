@@ -1,8 +1,5 @@
 /* TODO: on page load, animate all the cards like dominos to show that they can be flipped */
 
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 async function main() {
     // list of tile bg colors to randomly choose from
     const CARD_BG_COLORS = [
@@ -43,9 +40,9 @@ async function main() {
     // had to go 2nd as black space would load instead of bg vid, otherwise
     alertIfAppleLowPowerMode()
 
-    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // FUNCTION DEFINITIONS
-    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     async function populateCards() {
         // get a reference to the flippy cards container
@@ -157,26 +154,10 @@ async function main() {
         }
     }
 
-    /* Returns an array of YouTube url strings from the 'text' property of a JSON thingAboutMe. Assumes thisThing.text has video links.
-NOTE: Stopped short of using this with the goal of creating modals for each youtube link... maybe one day. */
-    // function getVideoLinksFrom(thisThingText) {
-    // 	// assume thisThing has video links
-    // 	// find a youtube URL ending with a single quote (')
-    // 	const regex = /https:\/\/www\.youtube\.com\/watch\?[^ ]*'/g;
-    // 	const matches = thisThingText.match(regex)
-    // 	const urls = []
-    // 	for (let i = 0; i < matches.length; i++) {
-    // 		// remove the trailing single quote from this url
-    // 		let match = matches[i].slice(0, -1)
-    // 		urls.push(match)
-    // 	}
-    // 	return urls
-    // }
-
     /* Indirectly checks if an Apple device is in low power mode, with about 75% confidence. */
     function alertIfAppleLowPowerMode() {
-        // return if no userAgent property
-        if (!navigator.userAgent) return
+        if (!navigator.userAgent)
+            return
         const userAgent = navigator.userAgent
         if (
             !userAgent.includes('iPhone') &&
